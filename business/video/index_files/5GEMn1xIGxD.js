@@ -1,0 +1,3 @@
+if (self.CavalryLogger) { CavalryLogger.start_js(["LIkIm"]); }
+
+__d("XUIBlock",["cx","React"],(function(a,b,c,d,e,f,g){a=b("React").PropTypes;c={propTypes:{background:a.oneOf(["base-wash","light-wash","white","highlight","transparent"])},getDefaultProps:function(){return{background:"transparent"}},getBackgroundClass:function(a){a=(a.background==="base-wash"?"_4-u5":"")+(a.background==="light-wash"?" _57d8":"")+(a.background==="white"?" _4-u8":"")+(a.background==="highlight"?" _4-u7":"");return a}};e.exports=c}),null);
