@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create two unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+  height: 90vh;
+}
+
+.left {
+  width: 10%;
+}
+
+.right {
+  width: 70%;
+}
+
+.middle {
+width: 20%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+</head>
+<body>
+
+<h2>Welcome to the lab...</h2>
+
+<div class="row">
+  <div class="column left" style="background-color:lightgreen;">
+    <h2>CV</h2>
+    <div class="footer_box_content">
+        <div class="cleaner_h10"></div>
+        <a href="EricResume.pdf" target="_blank">Open CV</a>
+    </div>
+  </div>
+
+  <div class="column middle" style="background-color:green;">
+
+    <h2>Papers</h2>
+    <div class="footer_box_content">
+        <div class="cleaner_h10"></div>
+        <a href="VisionRestorationViaOptogenetics.pdf" target="_blank">Vision Restoration Via Optogenetics</a>
+    </div>
+    <p></p>
+    <div class="footer_box_content">
+        <div class="cleaner_h10"></div>
+        <a href="NeuralNetworks.pdf" target="_blank">Neural Networks and Light</a>
+    </div>
+    <p></p>
+    <div class="footer_box_content">
+        <div class="cleaner_h10"></div>
+        <a href="OpenSourceWorkshop.pdf" target="_blank">Open Source Hackathon</a>
+    </div>
+    <p></p>
+    <p>Virtual Reality and Hand Selection (accepted)..</p>
+    <p>Depression Treatment with TMS (accepted)..</p>
+    <p>Predicting Hand Use with EEG and Virtual Reality (in prep)..</p>
+    <p>Mapping Sensory Brain Waves (in prep)..</p>
+
+
+  </div>
+
+   <div class="column right" style="background-color:darkgreen;">
+    <h2>Presentations</h2>
+    <div>
+
+<iframe width="276" height="189" src="https://www.youtube.com/embed/BLg1opVH028" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  </div>
+<div>
+<iframe width="276" height="189" src="https://www.youtube.com/embed/IdS0Tsxkxwc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </div>
+</div>
+</body>
+</html>
