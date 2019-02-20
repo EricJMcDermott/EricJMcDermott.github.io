@@ -64,71 +64,6 @@
 
 
 
-        <script>
-            // BEAT MESSAGE
-            var wixBiSession = {
-                requestId: (function(r){for(var t=document.cookie.split(';'),e=0;e<t.length;e++){for(var n=t[e].split('='),o=n[0],u=n[1];' '===o[0];)o=o.substr(1);if(r===o)return u}return''})('requestId'),
-                viewerSessionId: 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
-                    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
-                    return v.toString(16);
-                })
-                , initialTimestamp: Date.now()
-                , visitorId: publicModel.sessionInfo.visitorId
-
-                , is_rollout: 0
-                , is_platform_loaded: 1
-                , dc: '84'
-                , renderType: 'santa'
-                , wixBoltExclusionReason: 'Blog'
-                , wixBoltExclusionReasonMoreInfo: ''
-                , sendBeacon: /(\?|\&)suppressbi\=true(\&|$)/.test(location.search) ?
-                    function () {} :
-                    function(url) {
-                        var sent = false;
-                        try {
-                            sent = navigator.sendBeacon(url);
-                        } catch (e) {}
-                        if (!sent) {
-                            (new Image()).src = url;
-                        }
-                    }
-                , sendBeat: function (et, name, extra) {
-                    var tts = '';
-                    if (window.performance) {
-                        if (performance.now) {
-                            tts = '&tts=' + Math.round(performance.now());
-                        }
-                        if (name && performance.mark) {
-                            performance.mark(name + ' (beat ' + et + ')');
-                        }
-                    }
-                    var ts = et === 1 ? 0 : Date.now() - wixBiSession.initialTimestamp;
-                    wixBiSession.sendBeacon(
-                        'http://frog.wix.com/bt?src=29&evid=3'
-                        + '&pn=1'
-                        + '&et=' + et
-                        + (name ? '&event_name=' + encodeURIComponent(name) : '')
-                        + '&v=1.6544.16'
-                        + '&msid=e661c545-17cf-40d3-ac0d-d01f77834383'
-                        + '&vsi=' + wixBiSession.viewerSessionId
-                        + '&rid=' + wixBiSession.requestId
-                        + '&viewer_name=santa'
-                        + '&isp=0'
-                        + '&st=2'
-                        + '&ts=' + ts + tts
-                        + '&iss=1'
-                            + '&vid=' + wixBiSession.visitorId
-                        + '&is_rollout=0'
-                        + '&dc=84'
-
-                        + '&url=' + encodeURIComponent(location.href.replace(/^http(s)?:\/\/(www\.)?/, ''))
-                        + (extra ? extra : '')
-                    );
-                }
-            };
-            wixBiSession.sendBeat(1, 'Init');
-            // BEAT MESSAGE END
-        </script>
 
 
 
@@ -1156,7 +1091,7 @@
 
 #comp-ij38zy11 {
     margin-left: calc((100% - 980px) * 0.5);
-}</style><div data-exact-height="34" data-content-padding-horizontal="0" data-content-padding-vertical="0" title="" class="wp2" id="comp-jcvw8ase" style="left: 0px; position: absolute; top: 5px; width: 32px; height: 34px;"><a href="http://ericjamesmcdermott.com/home/photo" target="_self" id="comp-jcvw8aselink" class="wp2link" style="cursor: pointer; width: 32px; height: 34px;"><div data-style="" class="wp2img" id="comp-jcvw8aseimg" style="position: relative; width: 32px; height: 34px;"><img id="comp-jcvw8aseimgimage" alt="" data-type="image" src="./index_files/789e12_4681d0b8f76d4e329790497f179d86c6_mv2_d_2000_2500_s_2.webp" style="width: 32px; height: 34px; object-fit: cover;"></div></a></div><style type="text/css" data-styleid="wp2">.wp2_zoomedin {cursor:url(https://static.parastorage.com/services/skins/2.1229.80/images/wysiwyg/core/themes/base/cursor_zoom_out.png), url(https://static.parastorage.com/services/skins/2.1229.80/images/wysiwyg/core/themes/base/cursor_zoom_out.cur), auto;overflow:hidden;display:block;}
+}</style><div data-exact-height="34" data-content-padding-horizontal="0" data-content-padding-vertical="0" title="" class="wp2" id="comp-jcvw8ase" style="left: 0px; position: absolute; top: 5px; width: 32px; height: 34px;"><a href="http://ericjamesmcdermott.com/" target="_self" id="comp-jcvw8aselink" class="wp2link" style="cursor: pointer; width: 32px; height: 34px;"><div data-style="" class="wp2img" id="comp-jcvw8aseimg" style="position: relative; width: 32px; height: 34px;"><img id="comp-jcvw8aseimgimage" alt="" data-type="image" src="./index_files/789e12_4681d0b8f76d4e329790497f179d86c6_mv2_d_2000_2500_s_2.webp" style="width: 32px; height: 34px; object-fit: cover;"></div></a></div><style type="text/css" data-styleid="wp2">.wp2_zoomedin {cursor:url(https://static.parastorage.com/services/skins/2.1229.80/images/wysiwyg/core/themes/base/cursor_zoom_out.png), url(https://static.parastorage.com/services/skins/2.1229.80/images/wysiwyg/core/themes/base/cursor_zoom_out.cur), auto;overflow:hidden;display:block;}
 .wp2_zoomedout {cursor:url(https://static.parastorage.com/services/skins/2.1229.80/images/wysiwyg/core/themes/base/cursor_zoom_in.png), url(https://static.parastorage.com/services/skins/2.1229.80/images/wysiwyg/core/themes/base/cursor_zoom_in.cur), auto;}
 .wp2link {display:block;overflow:hidden;}
 .wp2img {overflow:hidden;}
