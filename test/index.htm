@@ -3,6 +3,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {
+  height: 100%;
   font-family: Arial;
   margin: 0;
 }
@@ -17,12 +18,23 @@ img {
 
 /* Position the image container (needed to position the left and right arrows) */
 .container {
-  position: absolute;
+      width: 54%;
+      height: 300px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 1%;
+      background-position: center center;
+      position: relative;
+      background-color: black;
 }
 
 /* Hide the images by default */
 .mySlides {
   display: none;
+  background-position: center center;
+background-repeat: no-repeat;
+background-size: cover;
 }
 
 /* Add a pointer when hovering over the thumbnail images */
@@ -35,20 +47,19 @@ img {
 .next {
   cursor: pointer;
   position: absolute;
-  top: 40%;
+  top: 150px;
   width: auto;
   padding: 16px;
-  margin-top: -50px;
   color: white;
   font-weight: bold;
   font-size: 20px;
   border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
+
 }
 
 /* Position the "next button" to the right */
 .next {
+  position: absolute;
   right: 0;
   border-radius: 3px 0 0 3px;
 }
@@ -76,6 +87,7 @@ img {
   color: white;
 }
 
+
 .row:after {
   content: "";
   display: table;
@@ -85,7 +97,7 @@ img {
 /* Six columns side by side */
 .column {
   float: left;
-  width: 16.66%;
+  width: 16.6%;
 }
 
 /* Add a transparency effect for thumnbail images */
@@ -100,7 +112,7 @@ img {
 </style>
 <body>
 
-<h2 style="text-align:center">Slideshow Gallery</h2>
+<h2 style="text-align:center">Portfolio</h2>
 
 <div class="container">
   <div class="mySlides">
