@@ -1,42 +1,86 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-body, html {
-  height: 100%;
-  margin: 0;
+div.gallery {
 }
 
-.bg {
-  /* The image used */
-  background-image: url("newimage-52.jpg");
+div.gallery:hover {
+}
 
-  /* Full height */
-  height: 100%;
+div.gallery img {
+  width: 70%;
+  height: 600PX;
+}
 
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+div.desc {
+  text-align: center;
+}
+
+
+
+.responsive {
+  float: left;
+  width: 33.3%;
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 33.3%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 </style>
 </head>
 <body>
+  <div style="text-align: center">
 
-<div class="bg">
-</br>
-  <h2> ADVENTURE</h2>
-  <a href="https://ericjamesmcdermott.com/worldmap">
-    <p> Where I've been... </p>
-  <img border="0" alt="WorldMap" src="worldmap.jpg" width="100" height="100">
-  </a>
+<h1>ADVENTURE</h1>
+
+<div class="responsive">
+  <div class="gallery">
+    <h3>Where I've been</h3>
+    <a target="_blank" href="EricJamesMcDermott.com/worldmap">
+      <img src="worldmap.png" alt="World Map, Eric James McDermott" width="450" height="100%">
+    </a>
+  </div>
 </div>
 
-</body>
-</html>
+<div class="responsive">
+  <div class="gallery">
+    <h3>Photography</h3>
+    <a target="_blank" href="EricJamesMcDermott.com/portfolio">
+      <img src="../portfolio/dist/images/newImage-54.jpg" alt="Photography, Landscape, Adventure, Wilderness, Eric James McDermott" width="450" height="1000">
+    </a>
+  </div>
+</div>
 
 
+<div class="responsive">
+  <div class="gallery">
+    <h3>Video</h3>
+    <a target="_blank" href="EricJamesMcDermott.com/video">
+      <img src="../portfolio/dist/images/newImage-20.jpg" alt="Video, Adventure, Eric James McDermott" width="450" height="400">
+    </a>
+  </div>
+</div>
+
+
+
+
+<div class="clearfix"></div>
+</div>
 
 </body>
 </html>
