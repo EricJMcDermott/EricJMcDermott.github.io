@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 * {
   box-sizing: border-box;
 }
-
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
 /* Create two unequal columns that floats next to each other */
 .column {
   float: left;
@@ -15,15 +24,19 @@
 }
 
 .left {
-  width: 10%;
+  width: 33%;
 }
 
 .right {
-  width: 70%;
+  width: 33%;
 }
 
 .middle {
-width: 20%;
+width: 33%;
+}
+
+.bluetext {
+  color:blue;
 }
 
 /* Clear floats after the columns */
@@ -35,49 +48,25 @@ width: 20%;
 </style>
 </head>
 <body>
+  <div style="text-align: center">
 
-<h2>Welcome to the lab...</h2>
-
+<h2 class="w3-center">THE LAB</h2>
+<div><hr></div>
 <div class="row">
-  <div class="column left" style="background-color:lightgreen;">
-    <h2>CV</h2>
+  <div class="column left" >
+    <h2>Resume</h2>
+    <div><hr></div>
+
     <div class="footer_box_content">
         <div class="cleaner_h10"></div>
-        <a href="EricResume.pdf" target="_blank">Open CV</a>
+        <a href="EricResume.pdf" target="_blank"><p class="bluetext">CV</p></a>
     </div>
   </div>
 
-  <div class="column middle" style="background-color:green;">
-
-    <h2>Papers</h2>
-    <p>Mapping Sensory Brain Waves <br /><i>(in prep)..</i></p>
-    <p>Predicting Hand Selection <br /><i>(in prep)..</i></p>
-    <p>Virtual Reality and Hand Selection <br /><i>(accepted)..</i></p>
-    <p>Depression Treatment with TMS <br /> <i> (accepted).. </i></p>
-    <div class="footer_box_content">
-        <div class="cleaner_h10"></div>
-        <a href="OpenSourceWorkshop.pdf" target="_blank">Open Source Hackathon</a>
-    </div>
-    <p></p>
-    <div class="footer_box_content">
-        <div class="cleaner_h10"></div>
-        <a href="NeuralNetworks.pdf" target="_blank">Neural Networks and Light</a>
-    </div>
-    <p></p>
-    <div class="footer_box_content">
-        <div class="cleaner_h10"></div>
-        <a href="VisionRestorationViaOptogenetics.pdf" target="_blank">Vision Restoration Via Optogenetics</a>
-    </div>
-    <p></p>
-
-
-
-
-
-  </div>
-
-   <div class="column right" style="background-color:darkgreen;">
+   <div class="column right" >
     <h2>Presentations</h2>
+    <div><hr></div>
+
     <div>
       <p>Vision Restoration with Optogenetics</p>
 <iframe width="276" height="189" src="https://www.youtube.com/embed/BLg1opVH028" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  </div>
@@ -85,5 +74,39 @@ width: 20%;
   <p>Mapping out the Baseball Swing</p>
 <iframe width="276" height="189" src="https://www.youtube.com/embed/IdS0Tsxkxwc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </div>
 </div>
+
+
+  <div class="column middle" >
+
+    <h2>Papers</h2>
+    <div><hr></div>
+
+    <p>Mapping Sensory Brain Waves <br /><i>(in prep)..</i></p>
+    <p>Predicting Hand Selection <br /><i>(in prep)..</i></p>
+    <p>Virtual Reality and Hand Selection <br /><i>(accepted)..</i></p>
+    <p>Depression Treatment with TMS <br /> <i> (accepted).. </i></p>
+    <div class="footer_box_content">
+        <div class="cleaner_h10"></div>
+        <a href="OpenSourceWorkshop.pdf" target="_blank"><p class="bluetext">Open Source Hackathon</p></a>
+    </div>
+    <p></p>
+
+    <div class="footer_box_content">
+        <div class="cleaner_h10"></div>
+        <a href="NeuralNetworks.pdf" target="_blank">
+<p class="bluetext">Neural Networks and Light</p>
+          </a>
+    </div>
+    <p></p>
+    <div class="footer_box_content">
+        <div class="cleaner_h10"></div>
+        <a href="VisionRestorationViaOptogenetics.pdf" target="_blank">
+          <p class="bluetext">Vision Restoration Via Optogenetics</p>
+          </a>
+    </div>
+    <p></p>
+  </div>
+
 </body>
+</div>
 </html>
