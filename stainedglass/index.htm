@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+div.containercontainer {
+  position: relative;
+  max-height: 500px;
+}
+
+img {
+  object-fit: contain;
+}
+
+</style>
+<body>
+  <div style="text-align: center">
+
+<h2 class="w3-center">STAINED GLASS</h2>
+<div><hr></div>
+
+
+<div class="containercontainer" style=align:middle>
+
+<div class="w3-content w3-display-container">
+  <p>Ducks in Flight</p>
+  <img class="mySlides1" src="ducks/ducks-1.jpg" style="width: 100%; height: 450px">
+  <img class="mySlides1" src="ducks/ducks-2.jpg" style="width: 100%; height: 450px">
+  <img class="mySlides1" src="ducks/ducks-3.jpg" style="width: 100%; height: 450px">
+  <img class="mySlides1" src="ducks/ducks-4.jpg" style="width: 100%; height: 450px">
+  <img class="mySlides1" src="ducks/ducks-5.jpg" style="width: 100%; height: 450px">
+  <img class="mySlides1" src="ducks/ducks-6.jpg" style="width: 100%; height: 450px">
+  <img class="mySlides1" src="ducks/ducks-7.jpg" style="width: 100%; height: 450px">
+  <img class="mySlides1" src="ducks/ducks-8.jpg" style="width: 100%; height: 450px">
+  <img class="mySlides1" src="ducks/ducks-9.jpg" style="width: 100%; height: 450px">
+  <img class="mySlides1" src="ducks/ducks-10.jpg" style="width: 100%; height: 450px">
+  <img class="mySlides1" src="ducks/ducks-11.jpg" style="width: 100%; height: 450px">
+  <img class="mySlides1" src="ducks/ducks-12.jpg" style="width: 100%; height: 450px">
+  <img class="mySlides1" src="ducks/ducks-13.jpg" style="width: 100%; height: 450px">
+  <img class="mySlides1" src="ducks/ducks-18.jpg" style="width: 100%; height: 450px">
+  <img class="mySlides1" src="ducks/ducks-14.jpg" style="width: 100%; height: 450px">
+  <img class="mySlides1" src="ducks/ducks-15.jpg" style="width: 100%; height: 450px">
+  <img class="mySlides1" src="ducks/ducks-17.jpg" style="width: 100%; height: 450px">
+  <img class="mySlides1" src="ducks/ducks-16.jpg" style="width: 100%; height: 450px">
+  <button class="w3-button w3-black "  onclick="plusDivs(-1, 0)">&#10094;</button>
+  <button class="w3-button w3-black  "  onclick="plusDivs(1, 0)">&#10095;</button>
+  <div><hr></div>
+</div>
+
+<p>The Sun and The Moon</p>
+<div class="w3-content w3-display-container">
+  <img class="mySlides2" src="sunandmoon/sunmoon-0.jpg" style="width: 100%; height: 450px">
+  <img class="mySlides2" src="sunandmoon/sunmoon-1.jpg" style="width: 100%; height: 450px">
+  <img class="mySlides2" src="sunandmoon/sunmoon-2.jpg" style="width: 100%; height: 450px">
+  <img class="mySlides2" src="sunandmoon/sunmoon-3.jpg" style="width: 100%; height: 450px">
+  <button class="w3-button w3-black" onclick="plusDivs(-1, 1)">&#10094;</button>
+  <button class="w3-button w3-black" onclick="plusDivs(1, 1)">&#10095;</button>
+  <div><hr></div>
+</div>
+
+<div class="w3-content w3-display-container">
+  <p>Kaledioscope</p>
+  <img class="mySlides3" src="kaledioscope/scope-1.jpg" style="width: 100%; height: 450px">
+  <img class="mySlides3" src="kaledioscope/scope-2.jpg" style="width: 100%; height: 450px">
+  <img class="mySlides3" src="kaledioscope/scope-3.jpg" style="width: 100%; height: 450px">
+  <img class="mySlides3" src="kaledioscope/scope-4.jpg" style="width: 100%; height: 450px">
+  <img class="mySlides3" src="kaledioscope/scope-5.jpg" style="width: 100%; height: 450px">
+  <img class="mySlides3" src="kaledioscope/scope-6.jpg" style="width: 100%; height: 450px">
+  <img class="mySlides3" src="kaledioscope/scope-7.jpg" style="width: 100%; height: 450px">
+  <button class="w3-button w3-black" onclick="plusDivs(-1, 2)">&#10094;</button>
+  <button class="w3-button w3-black" onclick="plusDivs(1, 2)">&#10095;</button>
+  <div><hr></div>
+</div>
+
+<script>
+var slideIndex = [18,3,7];
+var slideId = ["mySlides1", "mySlides2", "mySlides3"]
+showDivs(1, 0);
+showDivs(1, 1);
+showDivs(1, 2);
+
+function plusDivs(n, no) {
+  showDivs(slideIndex[no] += n, no);
+}
+
+function showDivs(n, no) {
+  var i;
+  var x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  x[slideIndex[no]-1].style.display = "block";
+}
+</script>
+</div>
+</div>
+</body>
+</html>
