@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.gallery {
+}
+
+div.gallery:hover {
+}
+
+div.gallery img {
+  width: 90%;
+  height: 500PX;
+}
+
+div.desc {
+  text-align: center;
+}
+
+
+
+.responsive {
+  float: left;
+  width: 19.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+</head>
+<body>
+
+<h1>ART</h1>
+
+<div class="responsive">
+  <div class="gallery">
+    <h3>Photography</h3>
+    <a target="_blank" href="portfolio">
+      <img src="../portfolio/dist/images/newImage-54.jpg" alt="Photography, Landscape, Adventure, Wilderness, Eric James McDermott" width="550" height="1000">
+    </a>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <h3>Video</h3>
+    <a target="_blank" href="../portfolio/dist/images/newImage-20.jpg">
+      <img src="../portfolio/dist/images/newImage-20.jpg" alt="Video, Adventure, Eric James McDermott" width="550" height="400">
+    </a>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <h3>Stained Glass</h3>
+    <a target="_blank" href="ducks.jpg">
+      <img src="ducks.jpg" alt="Stained Glass, Eric James McDermott" width="550" height="100%">
+    </a>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <h3>String Art</h3>
+    <a target="_blank" href="stringArt.jpg">
+      <img src="stringArt.jpg" alt="String Art, Eric James McDermott" width="%" height="400">
+    </a>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <h3>Writings</h3>
+    <a target="_blank" href="writing.jpg">
+      <img src="writing.jpg" alt="Writings, Eric James McDermott" width="100%" height="400">
+    </a>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+
+
+</body>
+</html>
