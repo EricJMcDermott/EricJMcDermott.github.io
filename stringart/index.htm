@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+div.containercontainer {
+  position: relative;
+  max-height: 500px;
+}
+
+img {
+  object-fit: contain;
+}
+
+</style>
+<body>
+  <div style="text-align: center">
+
+<h2 class="w3-center">STRING ART</h2>
+<div><hr></div>
+
+
+<div class="containercontainer" style=align:middle>
+
+<div class="w3-content w3-display-container">
+  <p>Time</p>
+  <img class="mySlides1" src="string-1.jpg" style="width: 100%; height: 450px">
+  <img class="mySlides1" src="string-2.jpg" style="width: 100%; height: 450px">
+  <img class="mySlides1" src="string-3.jpg" style="width: 100%; height: 450px">
+  <img class="mySlides1" src="string-4.jpg" style="width: 100%; height: 450px">
+  <img class="mySlides1" src="string-5.jpg" style="width: 100%; height: 450px">
+  <img class="mySlides1" src="string-6.jpg" style="width: 100%; height: 450px">
+  <img class="mySlides1" src="string-7.jpg" style="width: 100%; height: 450px">
+  <img class="mySlides1" src="string-8.jpg" style="width: 100%; height: 450px">
+  <img class="mySlides1" src="string-9.jpg" style="width: 100%; height: 450px">
+  <img class="mySlides1" src="string-10.jpg" style="width: 100%; height: 450px">
+  <img class="mySlides1" src="string-11.jpg" style="width: 100%; height: 450px">
+  <img class="mySlides1" src="string-12.jpg" style="width: 100%; height: 450px">
+
+  <button class="w3-button w3-black "  onclick="plusDivs(-1, 0)">&#10094;</button>
+  <button class="w3-button w3-black  "  onclick="plusDivs(1, 0)">&#10095;</button>
+  <div><hr></div>
+</div>
+
+<div>
+<div>
+  <p>"The Black Sun"</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/68jujZjc0PI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</div>
+<script>
+
+var slideIndex = [12];
+var slideId = ["mySlides1"]
+showDivs(1, 0);
+
+
+function plusDivs(n, no) {
+  showDivs(slideIndex[no] += n, no);
+}
+
+function showDivs(n, no) {
+  var i;
+  var x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  x[slideIndex[no]-1].style.display = "block";
+}
+</script>
+</div>
+</div>
+</body>
+</html>
