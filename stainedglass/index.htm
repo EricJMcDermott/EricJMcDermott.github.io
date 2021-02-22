@@ -58,8 +58,22 @@ img {
   <div><hr></div>
 </div>
 
-<p>The Sun and The Moon</p>
+
 <div class="w3-content w3-display-container">
+  <p>The Vineyard</p>
+
+  <img class="mySlides0" src="Wineyard/original.jpeg" style="width: 100%; height: 450px">
+  <img class="mySlides0" src="Wineyard/project.jpeg" style="width: 100%; height: 450px">
+  <img class="mySlides0" src="Wineyard/finished.jpeg" style="width: 100%; height: 450px">
+  <img class="mySlides0" src="Wineyard/finished2.jpeg" style="width: 100%; height: 450px">
+  <button class="w3-button w3-black" onclick="plusDivs(-1, 1)">&#10094;</button>
+  <button class="w3-button w3-black" onclick="plusDivs(1, 1)">&#10095;</button>
+  <div><hr></div>
+</div>
+
+<div class="w3-content w3-display-container">
+  <p>The Sun and The Moon</p>
+
   <img class="mySlides2" src="sunandmoon/sunmoon-0.jpg" style="width: 100%; height: 450px">
   <img class="mySlides2" src="sunandmoon/sunmoon-1.jpg" style="width: 100%; height: 450px">
   <img class="mySlides2" src="sunandmoon/sunmoon-2.jpg" style="width: 100%; height: 450px">
@@ -84,11 +98,12 @@ img {
 </div>
 
 <script>
-var slideIndex = [18,3,7];
-var slideId = ["mySlides1", "mySlides2", "mySlides3"]
+var slideIndex = [18,3,3,7];
+var slideId = ["mySlides1", "mySlides0", "mySlides2", "mySlides3"]
 showDivs(1, 0);
 showDivs(1, 1);
 showDivs(1, 2);
+showDivs(1, 3);
 
 function plusDivs(n, no) {
   showDivs(slideIndex[no] += n, no);
