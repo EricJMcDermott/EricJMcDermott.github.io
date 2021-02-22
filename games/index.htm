@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>EJM: Art</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+div.gallery {
+}
+
+div.gallery:hover {
+}
+
+div.gallery img {
+  width: 90%;
+  height: 500PX;
+}
+
+div.desc {
+  text-align: center;
+}
+
+
+
+.responsive {
+  float: left;
+  width: 33.3%;
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 49.99999%;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .responsive {
+    width: 50%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+</head>
+<body>
+
+<div style="text-align: center">
+  <h2 class="w3-center">ART</h2>
+
+<div><hr></div>
+
+<div class="responsive">
+  <div class="gallery">
+    <p>Box Shooter</p>
+    <a target="_blank" href="https://EricJamesMcDermott.com/BoxShooter">
+      <img src="BoxShooter.jpeg" alt="Games, Game design, box shooter, unity3d, Eric James McDermott" width="300" height="400">
+    </a>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <p>Roller Madness</p>
+    <a target="_blank" href="https://EricJamesMcDermott.com/Rollerball">
+      <img src="Rollerball.jpeg" alt="Games, Game design, box shooter, unity3d, Eric James McDermott"  width="300" height="400">
+    </a>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <p>Solar System Demo</p>
+    <a target="_blank" href="https://EricJamesMcDermott.com/SolarSystem">
+      <img src="SolarSystem.jpeg" alt="Games, Game design, box shooter, unity3d, Eric James McDermott"  width="300" height="400">
+    </a>
+  </div>
+</div>
+
+
+<div class="clearfix"></div>
+</div>
+
+</body>
+</html>
