@@ -1,0 +1,16 @@
+{
+"companyName": "Eric James McDermott",
+"productName": "Space Fossils",
+"productVersion": "1.0",
+"dataUrl": "SpaceFossilsWEB.data.unityweb",
+"wasmCodeUrl": "SpaceFossilsWEB.wasm.code.unityweb",
+"wasmFrameworkUrl": "SpaceFossilsWEB.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.4.20f1"
+}
