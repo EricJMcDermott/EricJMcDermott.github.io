@@ -1,91 +1,36 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-  <title>EJM: Adventure</title>
-
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-<style>
-div.gallery {
-}
-
-div.gallery:hover {
-}
-
-div.gallery img {
-  width: 50%;
-  height: 600PX;
-}
-
-div.desc {
-  text-align: center;
-}
-
-
-
-.responsive {
-  float: left;
-  width: 33.3%;
-}
-
-@media only screen and (max-width: 100%) {
-  .responsive {
-    width: 33.3%;
-  }
-}
-
-@media only screen and (max-width: 100%) {
-  .responsive {
-    width: 100%;
-  }
-}
-
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#05070f">
+  <title>Adventure — Eric James McDermott</title>
+  <link rel="stylesheet" href="../site.css">
 </head>
 <body>
-  <div style="text-align: center">
-
-<h1>ADVENTURE</h1>
-<div><hr></div>
-
-<div class="responsive">
-  <div class="gallery">
-    <h3>Where I've been</h3>
-    <a target="_blank" href="https://EricJamesMcDermott.com/worldmap">
-      <img src="worldmap.png" alt="World Map, Eric James McDermott" width="100%" height="100%">
-    </a>
-  </div>
-</div>
-
-<div class="responsive">
-  <div class="gallery">
-    <h3>Photography</h3>
-    <a target="_blank" href="https://ejm.photography">
-      <img src="../portfolio/images/newImage-54.jpg" alt="Photography, Landscape, Adventure, Wilderness, Eric James McDermott" width="100%" height="1000">
-    </a>
-  </div>
-</div>
-
-
-<div class="responsive">
-  <div class="gallery">
-    <h3>Video</h3>
-    <a target="_blank" href="https://EricJamesMcDermott.com/video">
-      <img src="../portfolio/images/newImage-20.jpg" alt="Video, Adventure, Eric James McDermott" width="100%" height="400">
-    </a>
-  </div>
-</div>
-
-
-
-
-<div class="clearfix"></div>
-</div>
-
+  <nav class="site-nav" aria-label="Site navigation">
+    <a class="site-nav__home" href="../">Eric James McDermott</a>
+    <span>Adventure</span>
+  </nav>
+  <main>
+    <header class="page-header">
+      <p class="eyebrow">Adventure</p>
+      <h1>Out there.</h1>
+    </header>
+    <section class="collection-grid" aria-label="Adventure projects">
+      <a class="collection-card" href="../worldmap/" target="_blank" rel="noopener">
+        <img src="worldmap.png" alt="World map showing places Eric James McDermott has visited">
+        <span class="collection-card__label"><span>Where I’ve been</span><span>↗</span></span>
+      </a>
+      <a class="collection-card" href="https://ejm.photography" target="_blank" rel="noopener noreferrer">
+        <img src="../portfolio/images/newImage-54.jpg" alt="Mountain landscape photography">
+        <span class="collection-card__label"><span>Photography</span><span>↗</span></span>
+      </a>
+      <a class="collection-card" href="../video/" target="_blank" rel="noopener">
+        <img src="../portfolio/images/newImage-20.jpg" alt="Adventure video still">
+        <span class="collection-card__label"><span>Video</span><span>↗</span></span>
+      </a>
+    </section>
+  </main>
 </body>
 </html>

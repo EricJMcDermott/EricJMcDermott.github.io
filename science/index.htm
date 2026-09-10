@@ -1,155 +1,57 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <title>EJM: Science</title>
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-  box-sizing: border-box;
-}
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-}
-/* Create two unequal columns that floats next to each other */
-.column {
-  float: left;
-  padding: 10px;
-  height: 90vh;
-}
-
-.left {
-  width: 33%;
-}
-
-.right {
-  width: 33%;
-}
-
-.middle {
-width: 33%;
-}
-
-.bluetext {
-  color:blue;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#05070f">
+  <title>The Lab — Eric James McDermott</title>
+  <link rel="stylesheet" href="../site.css">
 </head>
 <body>
-  <div style="text-align: center">
-
-<h2 class="w3-center">THE LAB</h2>
-<div><hr></div>
-<div class="row">
-  <div class="column left" >
-    <h2>Resume</h2>
-    <div><hr></div>
-
-    <div class="footer_box_content">
-        <div class="cleaner_h10"></div>
-        <a href="EJM-CV.pdf" target="_blank"><p class="bluetext">CV</p></a>
+  <nav class="site-nav" aria-label="Site navigation">
+    <a class="site-nav__home" href="../">Eric James McDermott</a>
+    <span>Science</span>
+  </nav>
+  <main>
+    <header class="page-header">
+      <p class="eyebrow">Science</p>
+      <h1>The lab.</h1>
+    </header>
+    <div class="content-grid">
+      <section class="panel" aria-labelledby="science-cv-title">
+        <h2 id="science-cv-title">Curriculum vitae</h2>
+        <ul class="link-list"><li><a href="EJM-CV.pdf" target="_blank" rel="noopener">Open CV ↗</a></li></ul>
+      </section>
+      <section class="panel" aria-labelledby="presentations-title">
+        <h2 id="presentations-title">Presentations</h2>
+        <div class="video">
+          <p>Virtual Reality Based Neurorehabilitation — DGKN 2021</p>
+          <iframe src="https://www.youtube.com/embed/8Jv4oByOR0g" title="Virtual Reality Based Neurorehabilitation presentation" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="video">
+          <p>Vision Restoration with Optogenetics</p>
+          <iframe src="https://www.youtube.com/embed/BLg1opVH028" title="Vision Restoration with Optogenetics presentation" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="video">
+          <p>Mapping out the Baseball Swing</p>
+          <iframe src="https://www.youtube.com/embed/IdS0Tsxkxwc" title="Mapping out the Baseball Swing presentation" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </section>
+      <section class="panel" aria-labelledby="papers-title">
+        <h2 id="papers-title">Papers &amp; reading</h2>
+        <ul class="link-list">
+          <li><a href="https://www.mdpi.com/1424-8220/22/1/96" target="_blank" rel="noopener noreferrer">Artifacts in EEG-based BCI therapies: friend or foe? ↗</a></li>
+          <li><a href="https://www.biorxiv.org/content/10.1101/2021.09.28.462120v1" target="_blank" rel="noopener noreferrer">Real-time decoding of five finger movements from two EMG channels for XR human-computer interaction ↗</a></li>
+          <li><a href="McDermott%202021%20Manuscript%20Final.pdf" target="_blank" rel="noopener">Predicting motor behavior: an EEG pipeline to detect relevant brain states ↗</a></li>
+          <li><a href="TMSdepression.pdf" target="_blank" rel="noopener">Brain oscillation-synchronized stimulation in depression using real-time EEG-triggered TMS ↗</a></li>
+          <li><a href="McDermottHimmelbach2019.pdf" target="_blank" rel="noopener">A low-cost virtual reality paradigm to map movement behavior ↗</a></li>
+          <li><a href="OpenSourceWorkshop.pdf" target="_blank" rel="noopener">Building and Hacking Open Source Hardware ↗</a></li>
+          <li><a href="NeuralNetworks.pdf" target="_blank" rel="noopener">Neural Networks and Light ↗</a></li>
+          <li><a href="VisionRestorationViaOptogenetics.pdf" target="_blank" rel="noopener">Vision Restoration Via Optogenetics ↗</a></li>
+          <li><a href="The%20Potential%20of%20Multisensory%20Processing.pdf" target="_blank" rel="noopener">The Potential of Multisensory Processing ↗</a></li>
+        </ul>
+      </section>
     </div>
-  </div>
-
-   <div class="column right" >
-    <h2>Presentations</h2>
-    <div><hr></div>
-
-    <div>
-      <p>Virtual Reality based Neurorehabilitation (DGKN 2021)</p>
-<iframe width="276" height="189" src="https://www.youtube.com/embed/8Jv4oByOR0g" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-      <p>Vision Restoration with Optogenetics</p>
-<iframe width="276" height="189" src="https://www.youtube.com/embed/BLg1opVH028" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  </div>
-<div>
-
-  <p>Mapping out the Baseball Swing</p>
-<iframe width="276" height="189" src="https://www.youtube.com/embed/IdS0Tsxkxwc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </div>
-</div>
-
-
-  <div class="column middle" >
-
-    <h2>Papers</h2>
-    <div><hr></div>
-
-    <div class="footer_box_content">
-        <div class="cleaner_h10"></div>
-        <a href="https://www.mdpi.com/1424-8220/22/1/96" target="_blank"><p class="bluetext">Artifacts in EEG-based BCI therapies: friend or foe?</p></a>
-    </div>
-    <p></p>
-
-    <div class="footer_box_content">
-        <div class="cleaner_h10"></div>
-        <a href="https://www.biorxiv.org/content/10.1101/2021.09.28.462120v1" target="_blank"><p class="bluetext">Real-time decoding of 5 finger movements from 2 EMG channels for XR human-computer interaction</p></a>
-    </div>
-    <p></p>
-
-    <div class="footer_box_content">
-        <div class="cleaner_h10"></div>
-        <a href="McDermott 2021 Manuscript Final.pdf" target="_blank"><p class="bluetext">Predicting motor behavior: an EEG processing pipeline to detect relevant brain-states</p></a>
-    </div>
-    <p></p>
-
-
-    <div class="footer_box_content">
-        <div class="cleaner_h10"></div>
-        <a href="TMSdepression.pdf" target="_blank"><p class="bluetext">Brain oscillation-synchronized stimulation of the left dorsolateralprefrontal cortex in depression using real-time EEG-triggered TMS</p></a>
-    </div>
-    <p></p>
-
-    <div class="footer_box_content">
-        <div class="cleaner_h10"></div>
-        <a href="McDermottHimmelbach2019.pdf" target="_blank"><p class="bluetext">A low-cost virtual reality paradigm to map movement behavior</p></a>
-    </div>
-    <p></p>
-
-    <div class="footer_box_content">
-        <div class="cleaner_h10"></div>
-        <a href="OpenSourceWorkshop.pdf" target="_blank"><p class="bluetext">Building and Hacking Open Source Hardware</p></a>
-    </div>
-    <p></p>
-
-    <div class="footer_box_content">
-        <div class="cleaner_h10"></div>
-        <a href="NeuralNetworks.pdf" target="_blank">
-<p class="bluetext">Neural Networks and Light</p>
-          </a>
-    </div>
-    <p></p>
-
-    <div class="footer_box_content">
-        <div class="cleaner_h10"></div>
-        <a href="VisionRestorationViaOptogenetics.pdf" target="_blank">
-          <p class="bluetext">Vision Restoration Via Optogenetics</p>
-          </a>
-    </div>
-    <p></p>
-
-    <div class="footer_box_content">
-        <div class="cleaner_h10"></div>
-        <a href="The Potential of Multisensory Processing.pdf" target="_blank">
-          <p class="bluetext">The Potential of Multisensory Processing</p>
-          </a>
-    </div>
-    <p></p>
-
-
-  </div>
-
+  </main>
 </body>
-</div>
 </html>
