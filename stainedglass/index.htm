@@ -1,127 +1,26 @@
-<!DOCTYPE html>
-<html>
-<title>EJM: Stained Glass</title>
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<style>
-
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-}
-
-div.containercontainer {
-  position: relative;
-  max-height: 500px;
-}
-
-img {
-  object-fit: contain;
-}
-
-</style>
-<body>
-  <div style="text-align: center">
-
-<h2 class="w3-center">STAINED GLASS</h2>
-<div><hr></div>
-
-
-<div class="containercontainer" style=align:middle>
-
-<div class="w3-content w3-display-container">
-  <p>Ducks in Flight</p>
-  <img class="mySlides1" src="ducks/ducks-1.jpg" style="width: 100%; height: 450px">
-  <img class="mySlides1" src="ducks/ducks-2.jpg" style="width: 100%; height: 450px">
-  <img class="mySlides1" src="ducks/ducks-3.jpg" style="width: 100%; height: 450px">
-  <img class="mySlides1" src="ducks/ducks-4.jpg" style="width: 100%; height: 450px">
-  <img class="mySlides1" src="ducks/ducks-5.jpg" style="width: 100%; height: 450px">
-  <img class="mySlides1" src="ducks/ducks-6.jpg" style="width: 100%; height: 450px">
-  <img class="mySlides1" src="ducks/ducks-7.jpg" style="width: 100%; height: 450px">
-  <img class="mySlides1" src="ducks/ducks-8.jpg" style="width: 100%; height: 450px">
-  <img class="mySlides1" src="ducks/ducks-9.jpg" style="width: 100%; height: 450px">
-  <img class="mySlides1" src="ducks/ducks-10.jpg" style="width: 100%; height: 450px">
-  <img class="mySlides1" src="ducks/ducks-11.jpg" style="width: 100%; height: 450px">
-  <img class="mySlides1" src="ducks/ducks-12.jpg" style="width: 100%; height: 450px">
-  <img class="mySlides1" src="ducks/ducks-13.jpg" style="width: 100%; height: 450px">
-  <img class="mySlides1" src="ducks/ducks-18.jpg" style="width: 100%; height: 450px">
-  <img class="mySlides1" src="ducks/ducks-14.jpg" style="width: 100%; height: 450px">
-  <img class="mySlides1" src="ducks/ducks-15.jpg" style="width: 100%; height: 450px">
-  <img class="mySlides1" src="ducks/ducks-17.jpg" style="width: 100%; height: 450px">
-  <img class="mySlides1" src="ducks/ducks-16.jpg" style="width: 100%; height: 450px">
-  <button class="w3-button w3-black "  onclick="plusDivs(-1, 0)">&#10094;</button>
-  <button class="w3-button w3-black  "  onclick="plusDivs(1, 0)">&#10095;</button>
-  <div><hr></div>
-</div>
-
-
-<div class="w3-content w3-display-container">
-  <p>The Vineyard</p>
-
-  <img class="mySlides0" src="Wineyard/original.jpeg" style="width: 100%; height: 450px">
-  <img class="mySlides0" src="Wineyard/project.jpeg" style="width: 100%; height: 450px">
-  <img class="mySlides0" src="Wineyard/finished.jpeg" style="width: 100%; height: 450px">
-  <img class="mySlides0" src="Wineyard/finished2.jpeg" style="width: 100%; height: 450px">
-  <button class="w3-button w3-black" onclick="plusDivs(-1, 1)">&#10094;</button>
-  <button class="w3-button w3-black" onclick="plusDivs(1, 1)">&#10095;</button>
-  <div><hr></div>
-</div>
-
-<div class="w3-content w3-display-container">
-  <p>The Sun and The Moon</p>
-
-  <img class="mySlides2" src="sunandmoon/sunmoon-0.jpg" style="width: 100%; height: 450px">
-  <img class="mySlides2" src="sunandmoon/sunmoon-1.jpg" style="width: 100%; height: 450px">
-  <img class="mySlides2" src="sunandmoon/sunmoon-2.jpg" style="width: 100%; height: 450px">
-  <img class="mySlides2" src="sunandmoon/sunmoon-3.jpg" style="width: 100%; height: 450px">
-  <button class="w3-button w3-black" onclick="plusDivs(-1, 1)">&#10094;</button>
-  <button class="w3-button w3-black" onclick="plusDivs(1, 1)">&#10095;</button>
-  <div><hr></div>
-</div>
-
-<div class="w3-content w3-display-container">
-  <p>Kaledioscope</p>
-  <img class="mySlides3" src="kaledioscope/scope-1.jpg" style="width: 100%; height: 450px">
-  <img class="mySlides3" src="kaledioscope/scope-2.jpg" style="width: 100%; height: 450px">
-  <img class="mySlides3" src="kaledioscope/scope-3.jpg" style="width: 100%; height: 450px">
-  <img class="mySlides3" src="kaledioscope/scope-4.jpg" style="width: 100%; height: 450px">
-  <img class="mySlides3" src="kaledioscope/scope-5.jpg" style="width: 100%; height: 450px">
-  <img class="mySlides3" src="kaledioscope/scope-6.jpg" style="width: 100%; height: 450px">
-  <img class="mySlides3" src="kaledioscope/scope-7.jpg" style="width: 100%; height: 450px">
-  <button class="w3-button w3-black" onclick="plusDivs(-1, 2)">&#10094;</button>
-  <button class="w3-button w3-black" onclick="plusDivs(1, 2)">&#10095;</button>
-  <div><hr></div>
-</div>
-
-<script>
-var slideIndex = [18,3,3,7];
-var slideId = ["mySlides1", "mySlides0", "mySlides2", "mySlides3"]
-showDivs(1, 0);
-showDivs(1, 1);
-showDivs(1, 2);
-showDivs(1, 3);
-
-function plusDivs(n, no) {
-  showDivs(slideIndex[no] += n, no);
-}
-
-function showDivs(n, no) {
-  var i;
-  var x = document.getElementsByClassName(slideId[no]);
-  if (n > x.length) {slideIndex[no] = 1}
-  if (n < 1) {slideIndex[no] = x.length}
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  x[slideIndex[no]-1].style.display = "block";
-}
-</script>
-</div>
-</div>
-</body>
-</html>
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#111310"><meta name="description" content="Four projects, from the first pieces to the finished work. Open any image to explore the details."><title>Stained glass — Eric James McDermott</title><link rel="icon" href="../assets/home/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../home.css?v=7f0f03987f"><link rel="stylesheet" href="../site.css?v=a22054218e"><script src="../site.js?v=b0b0f9573d" defer></script></head>
+<body class="world-page" data-world="art" id="top"><a class="skip-link" href="#collection">Skip to content</a><div class="reading-progress" aria-hidden="true"></div>
+<header class="universe-header">
+  <a class="wordmark" href="../" aria-label="Eric James McDermott home">EJM<span class="brand-star" aria-hidden="true">✳</span></a>
+  <span class="universe-name">ERIC JAMES<br>McDERMOTT</span>
+  <nav class="universe-nav" aria-label="Explore the worlds"><a href="../business/"><span>01</span> Business</a><a href="../science/"><span>02</span> Science</a><a href="../adventure/"><span>03</span> Adventure</a><a href="../art/" aria-current="page"><span>04</span> Art</a></nav>
+  <a class="universe-contact" href="mailto:EricJamesMcDermott@gmail.com">Say hello <span aria-hidden="true">↗</span></a>
+</header>
+<main><section class="page-hero "><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../">Home</a><span>/</span><a href="../art/">Art</a><span>/</span><span aria-current="page">Stained glass</span></nav><div class="page-hero-grid"><div class="page-hero-copy"><p class="eyebrow">04 / ART <span>— STAINED GLASS</span></p><h1>Let the<br><em>light in.</em></h1><p class="page-description">Four projects, from the first pieces to the finished work. Open any image to explore the details.</p><a class="round-link" href="#collection"><span class="round-arrow" aria-hidden="true">↓</span><span>EXPLORE THE GLASS</span></a></div></div></section>
+<section class="content-section paper-section" id="collection"><div class="content-heading"><div><p class="eyebrow">01 / STAINED GLASS</p><h2>Ducks in Flight</h2></div></div><div class="collection-carousel" data-carousel aria-label="Ducks in Flight carousel">
+  <div class="carousel-track" data-carousel-track tabindex="0"><a class="carousel-slide" href="ducks/ducks-1.jpg" data-gallery="Ducks in Flight carousel" data-caption="Ducks in Flight — 01" aria-label="Ducks in Flight — 01"><img src="../assets/gallery/stainedglass-ducks-ducks-1.webp" alt="Ducks in Flight — 01" loading="lazy" width="800" height="600"><span class="carousel-slide-title">Ducks in Flight — 01</span></a><a class="carousel-slide" href="ducks/ducks-2.jpg" data-gallery="Ducks in Flight carousel" data-caption="Ducks in Flight — 02" aria-label="Ducks in Flight — 02"><img src="../assets/gallery/stainedglass-ducks-ducks-2.webp" alt="Ducks in Flight — 02" loading="lazy" width="800" height="600"><span class="carousel-slide-title">Ducks in Flight — 02</span></a><a class="carousel-slide" href="ducks/ducks-3.jpg" data-gallery="Ducks in Flight carousel" data-caption="Ducks in Flight — 03" aria-label="Ducks in Flight — 03"><img src="../assets/gallery/stainedglass-ducks-ducks-3.webp" alt="Ducks in Flight — 03" loading="lazy" width="800" height="600"><span class="carousel-slide-title">Ducks in Flight — 03</span></a><a class="carousel-slide" href="ducks/ducks-4.jpg" data-gallery="Ducks in Flight carousel" data-caption="Ducks in Flight — 04" aria-label="Ducks in Flight — 04"><img src="../assets/gallery/stainedglass-ducks-ducks-4.webp" alt="Ducks in Flight — 04" loading="lazy" width="800" height="600"><span class="carousel-slide-title">Ducks in Flight — 04</span></a><a class="carousel-slide" href="ducks/ducks-5.jpg" data-gallery="Ducks in Flight carousel" data-caption="Ducks in Flight — 05" aria-label="Ducks in Flight — 05"><img src="../assets/gallery/stainedglass-ducks-ducks-5.webp" alt="Ducks in Flight — 05" loading="lazy" width="800" height="600"><span class="carousel-slide-title">Ducks in Flight — 05</span></a><a class="carousel-slide" href="ducks/ducks-6.jpg" data-gallery="Ducks in Flight carousel" data-caption="Ducks in Flight — 06" aria-label="Ducks in Flight — 06"><img src="../assets/gallery/stainedglass-ducks-ducks-6.webp" alt="Ducks in Flight — 06" loading="lazy" width="800" height="600"><span class="carousel-slide-title">Ducks in Flight — 06</span></a><a class="carousel-slide" href="ducks/ducks-7.jpg" data-gallery="Ducks in Flight carousel" data-caption="Ducks in Flight — 07" aria-label="Ducks in Flight — 07"><img src="../assets/gallery/stainedglass-ducks-ducks-7.webp" alt="Ducks in Flight — 07" loading="lazy" width="800" height="600"><span class="carousel-slide-title">Ducks in Flight — 07</span></a><a class="carousel-slide" href="ducks/ducks-8.jpg" data-gallery="Ducks in Flight carousel" data-caption="Ducks in Flight — 08" aria-label="Ducks in Flight — 08"><img src="../assets/gallery/stainedglass-ducks-ducks-8.webp" alt="Ducks in Flight — 08" loading="lazy" width="800" height="600"><span class="carousel-slide-title">Ducks in Flight — 08</span></a><a class="carousel-slide" href="ducks/ducks-9.jpg" data-gallery="Ducks in Flight carousel" data-caption="Ducks in Flight — 09" aria-label="Ducks in Flight — 09"><img src="../assets/gallery/stainedglass-ducks-ducks-9.webp" alt="Ducks in Flight — 09" loading="lazy" width="800" height="600"><span class="carousel-slide-title">Ducks in Flight — 09</span></a><a class="carousel-slide" href="ducks/ducks-10.jpg" data-gallery="Ducks in Flight carousel" data-caption="Ducks in Flight — 10" aria-label="Ducks in Flight — 10"><img src="../assets/gallery/stainedglass-ducks-ducks-10.webp" alt="Ducks in Flight — 10" loading="lazy" width="800" height="600"><span class="carousel-slide-title">Ducks in Flight — 10</span></a><a class="carousel-slide" href="ducks/ducks-11.jpg" data-gallery="Ducks in Flight carousel" data-caption="Ducks in Flight — 11" aria-label="Ducks in Flight — 11"><img src="../assets/gallery/stainedglass-ducks-ducks-11.webp" alt="Ducks in Flight — 11" loading="lazy" width="800" height="600"><span class="carousel-slide-title">Ducks in Flight — 11</span></a><a class="carousel-slide" href="ducks/ducks-12.jpg" data-gallery="Ducks in Flight carousel" data-caption="Ducks in Flight — 12" aria-label="Ducks in Flight — 12"><img src="../assets/gallery/stainedglass-ducks-ducks-12.webp" alt="Ducks in Flight — 12" loading="lazy" width="800" height="600"><span class="carousel-slide-title">Ducks in Flight — 12</span></a><a class="carousel-slide" href="ducks/ducks-13.jpg" data-gallery="Ducks in Flight carousel" data-caption="Ducks in Flight — 13" aria-label="Ducks in Flight — 13"><img src="../assets/gallery/stainedglass-ducks-ducks-13.webp" alt="Ducks in Flight — 13" loading="lazy" width="800" height="600"><span class="carousel-slide-title">Ducks in Flight — 13</span></a><a class="carousel-slide" href="ducks/ducks-18.jpg" data-gallery="Ducks in Flight carousel" data-caption="Ducks in Flight — 14" aria-label="Ducks in Flight — 14"><img src="../assets/gallery/stainedglass-ducks-ducks-18.webp" alt="Ducks in Flight — 14" loading="lazy" width="800" height="600"><span class="carousel-slide-title">Ducks in Flight — 14</span></a><a class="carousel-slide" href="ducks/ducks-14.jpg" data-gallery="Ducks in Flight carousel" data-caption="Ducks in Flight — 15" aria-label="Ducks in Flight — 15"><img src="../assets/gallery/stainedglass-ducks-ducks-14.webp" alt="Ducks in Flight — 15" loading="lazy" width="800" height="600"><span class="carousel-slide-title">Ducks in Flight — 15</span></a><a class="carousel-slide" href="ducks/ducks-15.jpg" data-gallery="Ducks in Flight carousel" data-caption="Ducks in Flight — 16" aria-label="Ducks in Flight — 16"><img src="../assets/gallery/stainedglass-ducks-ducks-15.webp" alt="Ducks in Flight — 16" loading="lazy" width="800" height="600"><span class="carousel-slide-title">Ducks in Flight — 16</span></a><a class="carousel-slide" href="ducks/ducks-17.jpg" data-gallery="Ducks in Flight carousel" data-caption="Ducks in Flight — 17" aria-label="Ducks in Flight — 17"><img src="../assets/gallery/stainedglass-ducks-ducks-17.webp" alt="Ducks in Flight — 17" loading="lazy" width="800" height="600"><span class="carousel-slide-title">Ducks in Flight — 17</span></a><a class="carousel-slide" href="ducks/ducks-16.jpg" data-gallery="Ducks in Flight carousel" data-caption="Ducks in Flight — 18" aria-label="Ducks in Flight — 18"><img src="../assets/gallery/stainedglass-ducks-ducks-16.webp" alt="Ducks in Flight — 18" loading="lazy" width="800" height="600"><span class="carousel-slide-title">Ducks in Flight — 18</span></a></div>
+  <div class="carousel-controls"><span class="carousel-count" data-carousel-count aria-live="polite">01 / 18</span><div class="carousel-progress" aria-hidden="true"><span data-carousel-progress></span></div><button type="button" data-carousel-prev aria-label="Previous image">←</button><button type="button" data-carousel-next aria-label="Next image">→</button></div>
+</div></section><section class="content-section dark-section" id="glass-1"><div class="content-heading"><div><p class="eyebrow">02 / STAINED GLASS</p><h2>The Vineyard</h2></div></div><div class="collection-carousel" data-carousel aria-label="The Vineyard carousel">
+  <div class="carousel-track" data-carousel-track tabindex="0"><a class="carousel-slide" href="Wineyard/original.jpeg" data-gallery="The Vineyard carousel" data-caption="The Vineyard — 01" aria-label="The Vineyard — 01"><img src="../assets/gallery/stainedglass-Wineyard-original.webp" alt="The Vineyard — 01" loading="lazy" width="800" height="600"><span class="carousel-slide-title">The Vineyard — 01</span></a><a class="carousel-slide" href="Wineyard/project.jpeg" data-gallery="The Vineyard carousel" data-caption="The Vineyard — 02" aria-label="The Vineyard — 02"><img src="../assets/gallery/stainedglass-Wineyard-project.webp" alt="The Vineyard — 02" loading="lazy" width="800" height="600"><span class="carousel-slide-title">The Vineyard — 02</span></a><a class="carousel-slide" href="Wineyard/finished.jpeg" data-gallery="The Vineyard carousel" data-caption="The Vineyard — 03" aria-label="The Vineyard — 03"><img src="../assets/gallery/stainedglass-Wineyard-finished.webp" alt="The Vineyard — 03" loading="lazy" width="800" height="600"><span class="carousel-slide-title">The Vineyard — 03</span></a><a class="carousel-slide" href="Wineyard/finished2.jpeg" data-gallery="The Vineyard carousel" data-caption="The Vineyard — 04" aria-label="The Vineyard — 04"><img src="../assets/gallery/stainedglass-Wineyard-finished2.webp" alt="The Vineyard — 04" loading="lazy" width="800" height="600"><span class="carousel-slide-title">The Vineyard — 04</span></a></div>
+  <div class="carousel-controls"><span class="carousel-count" data-carousel-count aria-live="polite">01 / 04</span><div class="carousel-progress" aria-hidden="true"><span data-carousel-progress></span></div><button type="button" data-carousel-prev aria-label="Previous image">←</button><button type="button" data-carousel-next aria-label="Next image">→</button></div>
+</div></section><section class="content-section paper-section" id="glass-2"><div class="content-heading"><div><p class="eyebrow">03 / STAINED GLASS</p><h2>The Sun and the Moon</h2></div></div><div class="collection-carousel" data-carousel aria-label="The Sun and the Moon carousel">
+  <div class="carousel-track" data-carousel-track tabindex="0"><a class="carousel-slide" href="sunandmoon/sunmoon-0.jpg" data-gallery="The Sun and the Moon carousel" data-caption="The Sun and the Moon — 01" aria-label="The Sun and the Moon — 01"><img src="../assets/gallery/stainedglass-sunandmoon-sunmoon-0.webp" alt="The Sun and the Moon — 01" loading="lazy" width="800" height="600"><span class="carousel-slide-title">The Sun and the Moon — 01</span></a><a class="carousel-slide" href="sunandmoon/sunmoon-1.jpg" data-gallery="The Sun and the Moon carousel" data-caption="The Sun and the Moon — 02" aria-label="The Sun and the Moon — 02"><img src="../assets/gallery/stainedglass-sunandmoon-sunmoon-1.webp" alt="The Sun and the Moon — 02" loading="lazy" width="800" height="600"><span class="carousel-slide-title">The Sun and the Moon — 02</span></a><a class="carousel-slide" href="sunandmoon/sunmoon-2.jpg" data-gallery="The Sun and the Moon carousel" data-caption="The Sun and the Moon — 03" aria-label="The Sun and the Moon — 03"><img src="../assets/gallery/stainedglass-sunandmoon-sunmoon-2.webp" alt="The Sun and the Moon — 03" loading="lazy" width="800" height="600"><span class="carousel-slide-title">The Sun and the Moon — 03</span></a><a class="carousel-slide" href="sunandmoon/sunmoon-3.jpg" data-gallery="The Sun and the Moon carousel" data-caption="The Sun and the Moon — 04" aria-label="The Sun and the Moon — 04"><img src="../assets/gallery/stainedglass-sunandmoon-sunmoon-3.webp" alt="The Sun and the Moon — 04" loading="lazy" width="800" height="600"><span class="carousel-slide-title">The Sun and the Moon — 04</span></a></div>
+  <div class="carousel-controls"><span class="carousel-count" data-carousel-count aria-live="polite">01 / 04</span><div class="carousel-progress" aria-hidden="true"><span data-carousel-progress></span></div><button type="button" data-carousel-prev aria-label="Previous image">←</button><button type="button" data-carousel-next aria-label="Next image">→</button></div>
+</div></section><section class="content-section dark-section" id="glass-3"><div class="content-heading"><div><p class="eyebrow">04 / STAINED GLASS</p><h2>Kaleidoscope</h2></div></div><div class="collection-carousel" data-carousel aria-label="Kaleidoscope carousel">
+  <div class="carousel-track" data-carousel-track tabindex="0"><a class="carousel-slide" href="kaledioscope/scope-1.jpg" data-gallery="Kaleidoscope carousel" data-caption="Kaleidoscope — 01" aria-label="Kaleidoscope — 01"><img src="../assets/gallery/stainedglass-kaledioscope-scope-1.webp" alt="Kaleidoscope — 01" loading="lazy" width="800" height="600"><span class="carousel-slide-title">Kaleidoscope — 01</span></a><a class="carousel-slide" href="kaledioscope/scope-2.jpg" data-gallery="Kaleidoscope carousel" data-caption="Kaleidoscope — 02" aria-label="Kaleidoscope — 02"><img src="../assets/gallery/stainedglass-kaledioscope-scope-2.webp" alt="Kaleidoscope — 02" loading="lazy" width="800" height="600"><span class="carousel-slide-title">Kaleidoscope — 02</span></a><a class="carousel-slide" href="kaledioscope/scope-3.jpg" data-gallery="Kaleidoscope carousel" data-caption="Kaleidoscope — 03" aria-label="Kaleidoscope — 03"><img src="../assets/gallery/stainedglass-kaledioscope-scope-3.webp" alt="Kaleidoscope — 03" loading="lazy" width="800" height="600"><span class="carousel-slide-title">Kaleidoscope — 03</span></a><a class="carousel-slide" href="kaledioscope/scope-4.jpg" data-gallery="Kaleidoscope carousel" data-caption="Kaleidoscope — 04" aria-label="Kaleidoscope — 04"><img src="../assets/gallery/stainedglass-kaledioscope-scope-4.webp" alt="Kaleidoscope — 04" loading="lazy" width="800" height="600"><span class="carousel-slide-title">Kaleidoscope — 04</span></a><a class="carousel-slide" href="kaledioscope/scope-5.jpg" data-gallery="Kaleidoscope carousel" data-caption="Kaleidoscope — 05" aria-label="Kaleidoscope — 05"><img src="../assets/gallery/stainedglass-kaledioscope-scope-5.webp" alt="Kaleidoscope — 05" loading="lazy" width="800" height="600"><span class="carousel-slide-title">Kaleidoscope — 05</span></a><a class="carousel-slide" href="kaledioscope/scope-6.jpg" data-gallery="Kaleidoscope carousel" data-caption="Kaleidoscope — 06" aria-label="Kaleidoscope — 06"><img src="../assets/gallery/stainedglass-kaledioscope-scope-6.webp" alt="Kaleidoscope — 06" loading="lazy" width="800" height="600"><span class="carousel-slide-title">Kaleidoscope — 06</span></a><a class="carousel-slide" href="kaledioscope/scope-7.jpg" data-gallery="Kaleidoscope carousel" data-caption="Kaleidoscope — 07" aria-label="Kaleidoscope — 07"><img src="../assets/gallery/stainedglass-kaledioscope-scope-7.webp" alt="Kaleidoscope — 07" loading="lazy" width="800" height="600"><span class="carousel-slide-title">Kaleidoscope — 07</span></a></div>
+  <div class="carousel-controls"><span class="carousel-count" data-carousel-count aria-live="polite">01 / 07</span><div class="carousel-progress" aria-hidden="true"><span data-carousel-progress></span></div><button type="button" data-carousel-prev aria-label="Previous image">←</button><button type="button" data-carousel-next aria-label="Next image">→</button></div>
+</div></section>
+</main><section class="continue-exploring"><div class="eyebrow">KEEP FOLLOWING YOUR CURIOSITY</div><nav aria-label="Continue exploring"><a href="../business/"><small>01 / NEXT WORLD</small><span>Business ↗</span></a><a href="../science/"><small>02 / NEXT WORLD</small><span>Science ↗</span></a><a href="../adventure/"><small>03 / NEXT WORLD</small><span>Adventure ↗</span></a></nav></section>
+<footer class="universe-footer"><a href="../">← All worlds</a><span>ERIC JAMES McDERMOTT</span><button class="motion-toggle" type="button" aria-pressed="false" hidden><span class="motion-label">Pause motion</span></button><a href="mailto:EricJamesMcDermott@gmail.com">Start a conversation ↗</a></footer><dialog class="image-viewer" aria-label="Image viewer"><div class="viewer-toolbar"><p id="viewer-caption" aria-live="polite"></p><a id="viewer-original" target="_blank" rel="noopener">Open original ↗</a><button type="button" data-close-viewer aria-label="Close image viewer">Close ×</button></div><div class="viewer-stage"><button type="button" data-previous-image aria-label="Previous image">←</button><img id="viewer-image" alt=""><button type="button" data-next-image aria-label="Next image">→</button></div><p class="viewer-help">Use ← → to explore · Esc to close</p></dialog></body></html>

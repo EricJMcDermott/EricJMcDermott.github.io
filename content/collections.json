@@ -1,0 +1,905 @@
+{
+  "portfolio": [
+    {
+      "src": "images/new86.jpg",
+      "thumb": "images/new86.jpg",
+      "title": "Photograph 01"
+    },
+    {
+      "src": "images/new84.jpg",
+      "thumb": "images/new84.jpg",
+      "title": "Photograph 02"
+    },
+    {
+      "src": "images/new85.jpg",
+      "thumb": "images/new85.jpg",
+      "title": "Photograph 03"
+    },
+    {
+      "src": "images/new88.jpg",
+      "thumb": "images/new88.jpg",
+      "title": "Photograph 04"
+    },
+    {
+      "src": "images/new83.jpg",
+      "thumb": "images/new83.jpg",
+      "title": "Photograph 05"
+    },
+    {
+      "src": "images/new87.jpg",
+      "thumb": "images/new87.jpg",
+      "title": "Photograph 06"
+    },
+    {
+      "src": "images/new89.jpg",
+      "thumb": "images/new89.jpg",
+      "title": "Photograph 07"
+    },
+    {
+      "src": "images/newImage-71.jpg",
+      "thumb": "src/images/newThumb-71.jpg",
+      "title": "Photograph 08"
+    },
+    {
+      "src": "images/newImage-8.jpg",
+      "thumb": "src/images/newThumb-8.jpg",
+      "title": "Photograph 09"
+    },
+    {
+      "src": "images/newImage-5.jpg",
+      "thumb": "src/images/newThumb-5.jpg",
+      "title": "Photograph 10"
+    },
+    {
+      "src": "images/newImage-72.jpg",
+      "thumb": "src/images/newThumb-72.jpg",
+      "title": "Photograph 11"
+    },
+    {
+      "src": "images/newImage-11.jpg",
+      "thumb": "src/images/newThumb-11.jpg",
+      "title": "Photograph 12"
+    },
+    {
+      "src": "images/newImage-14.jpg",
+      "thumb": "src/images/newThumb-14.jpg",
+      "title": "Photograph 13"
+    },
+    {
+      "src": "images/newImage-2.jpg",
+      "thumb": "src/images/newThumb-2.jpg",
+      "title": "Photograph 14"
+    },
+    {
+      "src": "images/newImage-74.jpg",
+      "thumb": "src/images/newThumb-74.jpg",
+      "title": "Photograph 15"
+    },
+    {
+      "src": "images/newImage-81.jpg",
+      "thumb": "src/images/newThumb-81.jpg",
+      "title": "Photograph 16"
+    },
+    {
+      "src": "images/newImage-27.jpg",
+      "thumb": "src/images/newThumb-27.jpg",
+      "title": "Photograph 17"
+    },
+    {
+      "src": "images/newImage-29.jpg",
+      "thumb": "src/images/newThumb-29.jpg",
+      "title": "Photograph 18"
+    },
+    {
+      "src": "images/newImage-17.jpg",
+      "thumb": "src/images/newThumb-17.jpg",
+      "title": "Photograph 19"
+    },
+    {
+      "src": "images/newImage-33.jpg",
+      "thumb": "src/images/newThumb-33.jpg",
+      "title": "Photograph 20"
+    },
+    {
+      "src": "images/newImage-10.jpg",
+      "thumb": "src/images/newThumb-10.jpg",
+      "title": "Photograph 21"
+    },
+    {
+      "src": "images/newImage-30.jpg",
+      "thumb": "src/images/newThumb-30.jpg",
+      "title": "Photograph 22"
+    },
+    {
+      "src": "images/newImage-80.jpg",
+      "thumb": "src/images/newThumb-80.jpg",
+      "title": "Photograph 23"
+    },
+    {
+      "src": "images/newImage-21.jpg",
+      "thumb": "src/images/newThumb-21.jpg",
+      "title": "Photograph 24"
+    },
+    {
+      "src": "images/newImage-44.jpg",
+      "thumb": "src/images/newThumb-44.jpg",
+      "title": "Photograph 25"
+    },
+    {
+      "src": "images/newImage-47.jpg",
+      "thumb": "src/images/newThumb-47.jpg",
+      "title": "Photograph 26"
+    },
+    {
+      "src": "images/newImage-51.jpg",
+      "thumb": "src/images/newThumb-51.jpg",
+      "title": "Photograph 27"
+    },
+    {
+      "src": "images/newImage-57.jpg",
+      "thumb": "src/images/newThumb-57.jpg",
+      "title": "Photograph 28"
+    },
+    {
+      "src": "images/newImage-64.jpg",
+      "thumb": "src/images/newThumb-64.jpg",
+      "title": "Photograph 29"
+    },
+    {
+      "src": "images/newImage-68.jpg",
+      "thumb": "src/images/newThumb-68.jpg",
+      "title": "Photograph 30"
+    },
+    {
+      "src": "src/images/newThumb-1.jpg",
+      "thumb": "src/images/newThumb-1.jpg",
+      "title": "Photograph 31"
+    },
+    {
+      "src": "images/newImage-3.jpg",
+      "thumb": "src/images/newThumb-3.jpg",
+      "title": "Photograph 32"
+    },
+    {
+      "src": "images/newImage-50.jpg",
+      "thumb": "src/images/newThumb-50.jpg",
+      "title": "Photograph 33"
+    },
+    {
+      "src": "images/newImage-4.jpg",
+      "thumb": "src/images/newThumb-4.jpg",
+      "title": "Photograph 34"
+    },
+    {
+      "src": "images/newImage-7.jpg",
+      "thumb": "src/images/newThumb-7.jpg",
+      "title": "Photograph 35"
+    },
+    {
+      "src": "images/newImage-6.jpg",
+      "thumb": "src/images/newThumb-6.jpg",
+      "title": "Photograph 36"
+    },
+    {
+      "src": "images/newImage-9.jpg",
+      "thumb": "src/images/newThumb-9.jpg",
+      "title": "Photograph 37"
+    },
+    {
+      "src": "images/newImage-13.jpg",
+      "thumb": "src/images/newThumb-13.jpg",
+      "title": "Photograph 38"
+    },
+    {
+      "src": "images/newImage-16.jpg",
+      "thumb": "src/images/newThumb-16.jpg",
+      "title": "Photograph 39"
+    },
+    {
+      "src": "images/newImage-15.jpg",
+      "thumb": "src/images/newThumb-15.jpg",
+      "title": "Photograph 40"
+    },
+    {
+      "src": "images/newImage-18.jpg",
+      "thumb": "src/images/newThumb-18.jpg",
+      "title": "Photograph 41"
+    },
+    {
+      "src": "images/newImage-19.jpg",
+      "thumb": "src/images/newThumb-19.jpg",
+      "title": "Photograph 42"
+    },
+    {
+      "src": "images/newImage-22.jpg",
+      "thumb": "src/images/newThumb-22.jpg",
+      "title": "Photograph 43"
+    },
+    {
+      "src": "images/newImage-82.jpg",
+      "thumb": "src/images/newThumb-82.jpg",
+      "title": "Photograph 44"
+    },
+    {
+      "src": "images/newImage-23.jpg",
+      "thumb": "src/images/newThumb-23.jpg",
+      "title": "Photograph 45"
+    },
+    {
+      "src": "images/newImage-24.jpg",
+      "thumb": "src/images/newThumb-24.jpg",
+      "title": "Photograph 46"
+    },
+    {
+      "src": "images/newImage-25.jpg",
+      "thumb": "src/images/newThumb-25.jpg",
+      "title": "Photograph 47"
+    },
+    {
+      "src": "images/newImage-26.jpg",
+      "thumb": "src/images/newThumb-26.jpg",
+      "title": "Photograph 48"
+    },
+    {
+      "src": "images/newImage-31.jpg",
+      "thumb": "src/images/newThumb-31.jpg",
+      "title": "Photograph 49"
+    },
+    {
+      "src": "images/newImage-34.jpg",
+      "thumb": "src/images/newThumb-34.jpg",
+      "title": "Photograph 50"
+    },
+    {
+      "src": "images/newImage-33.jpg",
+      "thumb": "src/images/newThumb-33.jpg",
+      "title": "Photograph 51"
+    },
+    {
+      "src": "images/newImage-32.jpg",
+      "thumb": "src/images/newThumb-32.jpg",
+      "title": "Photograph 52"
+    },
+    {
+      "src": "images/newImage-38.jpg",
+      "thumb": "src/images/newThumb-38.jpg",
+      "title": "Photograph 53"
+    },
+    {
+      "src": "images/newImage-35.jpg",
+      "thumb": "src/images/newThumb-35.jpg",
+      "title": "Photograph 54"
+    },
+    {
+      "src": "images/newImage-36.jpg",
+      "thumb": "src/images/newThumb-36.jpg",
+      "title": "Photograph 55"
+    },
+    {
+      "src": "images/newImage-41.jpg",
+      "thumb": "src/images/newThumb-41.jpg",
+      "title": "Photograph 56"
+    },
+    {
+      "src": "images/newImage-42.jpg",
+      "thumb": "src/images/newThumb-42.jpg",
+      "title": "Photograph 57"
+    },
+    {
+      "src": "images/newImage-43.jpg",
+      "thumb": "src/images/newThumb-43.jpg",
+      "title": "Photograph 58"
+    },
+    {
+      "src": "images/newImage-45.jpg",
+      "thumb": "src/images/newThumb-45.jpg",
+      "title": "Photograph 59"
+    },
+    {
+      "src": "images/newImage-46.jpg",
+      "thumb": "src/images/newThumb-46.jpg",
+      "title": "Photograph 60"
+    },
+    {
+      "src": "images/newImage-48.jpg",
+      "thumb": "src/images/newThumb-48.jpg",
+      "title": "Photograph 61"
+    },
+    {
+      "src": "images/newImage-49.jpg",
+      "thumb": "src/images/newThumb-49.jpg",
+      "title": "Photograph 62"
+    },
+    {
+      "src": "images/newImage-53.jpg",
+      "thumb": "src/images/newThumb-53.jpg",
+      "title": "Photograph 63"
+    },
+    {
+      "src": "images/newImage-55.jpg",
+      "thumb": "src/images/newThumb-55.jpg",
+      "title": "Photograph 64"
+    },
+    {
+      "src": "images/newImage-56.jpg",
+      "thumb": "src/images/newThumb-56.jpg",
+      "title": "Photograph 65"
+    },
+    {
+      "src": "images/newImage-58.jpg",
+      "thumb": "src/images/newThumb-58.jpg",
+      "title": "Photograph 66"
+    },
+    {
+      "src": "images/newImage-59.jpg",
+      "thumb": "src/images/newThumb-59.jpg",
+      "title": "Photograph 67"
+    },
+    {
+      "src": "images/newImage-60.jpg",
+      "thumb": "src/images/newThumb-60.jpg",
+      "title": "Photograph 68"
+    },
+    {
+      "src": "images/newImage-62.jpg",
+      "thumb": "src/images/newThumb-62.jpg",
+      "title": "Photograph 69"
+    },
+    {
+      "src": "images/newImage-61.jpg",
+      "thumb": "src/images/newThumb-61.jpg",
+      "title": "Photograph 70"
+    },
+    {
+      "src": "images/newImage-63.jpg",
+      "thumb": "src/images/newThumb-63.jpg",
+      "title": "Photograph 71"
+    },
+    {
+      "src": "images/newImage-65.jpg",
+      "thumb": "src/images/newThumb-65.jpg",
+      "title": "Photograph 72"
+    },
+    {
+      "src": "images/newImage-66.jpg",
+      "thumb": "src/images/newThumb-66.jpg",
+      "title": "Photograph 73"
+    },
+    {
+      "src": "images/newImage-67.jpg",
+      "thumb": "src/images/newThumb-67.jpg",
+      "title": "Photograph 74"
+    },
+    {
+      "src": "images/newImage-70.jpg",
+      "thumb": "src/images/newThumb-70.jpg",
+      "title": "Photograph 75"
+    },
+    {
+      "src": "images/newImage-52.jpg",
+      "thumb": "src/images/newThumb-52.jpg",
+      "title": "Photograph 76"
+    },
+    {
+      "src": "images/newImage-76.jpg",
+      "thumb": "src/images/newThumb-76.jpg",
+      "title": "Photograph 77"
+    },
+    {
+      "src": "images/newImage-77.jpg",
+      "thumb": "src/images/newThumb-77.jpg",
+      "title": "Photograph 78"
+    },
+    {
+      "src": "images/newImage-78.jpg",
+      "thumb": "src/images/newThumb-78.jpg",
+      "title": "Photograph 79"
+    },
+    {
+      "src": "images/newImage-79.jpg",
+      "thumb": "src/images/newThumb-79.jpg",
+      "title": "Photograph 80"
+    },
+    {
+      "src": "images/newImage-54.jpg",
+      "thumb": "src/images/newThumb-54.jpg",
+      "title": "Photograph 81"
+    },
+    {
+      "src": "images/newImage-20.jpg",
+      "thumb": "src/images/newThumb-20.jpg",
+      "title": "Photograph 82"
+    },
+    {
+      "src": "images/newImage-28.jpg",
+      "thumb": "src/images/newThumb-28.jpg",
+      "title": "Photograph 83"
+    },
+    {
+      "src": "images/newImage-39.jpg",
+      "thumb": "src/images/newThumb-39.jpg",
+      "title": "Photograph 84"
+    },
+    {
+      "src": "images/newImage-40.jpg",
+      "thumb": "src/images/newThumb-40.jpg",
+      "title": "Photograph 85"
+    },
+    {
+      "src": "images/newImage-73.jpg",
+      "thumb": "src/images/newThumb-73.jpg",
+      "title": "Photograph 86"
+    }
+  ],
+  "writings": [
+    {
+      "src": "dist/abovetheclouds.png",
+      "thumb": "src/abovetheclouds.png",
+      "title": "Above the Clouds"
+    },
+    {
+      "src": "dist/ancienteyes.png",
+      "thumb": "src/ancienteyes.png",
+      "title": "Ancient Eyes"
+    },
+    {
+      "src": "dist/bloom.png",
+      "thumb": "src/bloom.png",
+      "title": "Bloom"
+    },
+    {
+      "src": "dist/caress.png",
+      "thumb": "src/caress.png",
+      "title": "Caress"
+    },
+    {
+      "src": "dist/drowning.png",
+      "thumb": "src/drowning.png",
+      "title": "Drowning"
+    },
+    {
+      "src": "dist/earthsorchestra.png",
+      "thumb": "src/earthsorchestra.png",
+      "title": "Earth’s Orchestra"
+    },
+    {
+      "src": "dist/echoes.png",
+      "thumb": "src/echoes.png",
+      "title": "Echoes"
+    },
+    {
+      "src": "dist/embers.png",
+      "thumb": "src/embers.png",
+      "title": "Embers"
+    },
+    {
+      "src": "dist/emptiness.png",
+      "thumb": "src/emptiness.png",
+      "title": "Emptiness"
+    },
+    {
+      "src": "dist/etchings.png",
+      "thumb": "src/etchings.png",
+      "title": "Etchings"
+    },
+    {
+      "src": "dist/fall.png",
+      "thumb": "src/fall.png",
+      "title": "Fall"
+    },
+    {
+      "src": "dist/fireinthenight.png",
+      "thumb": "src/fireinthenight.png",
+      "title": "Fire in the Night"
+    },
+    {
+      "src": "dist/floating.png",
+      "thumb": "src/floating.png",
+      "title": "Floating"
+    },
+    {
+      "src": "dist/free.png",
+      "thumb": "src/free.png",
+      "title": "Free"
+    },
+    {
+      "src": "dist/frozen.png",
+      "thumb": "src/frozen.png",
+      "title": "Frozen"
+    },
+    {
+      "src": "dist/home.png",
+      "thumb": "src/home.png",
+      "title": "Home"
+    },
+    {
+      "src": "dist/jump.png",
+      "thumb": "src/jump.png",
+      "title": "Jump"
+    },
+    {
+      "src": "dist/likeants.png",
+      "thumb": "src/likeants.png",
+      "title": "Like Ants"
+    },
+    {
+      "src": "dist/likegraspingatsand.png",
+      "thumb": "src/graspingatsand.png",
+      "title": "Like Grasping at Sand"
+    },
+    {
+      "src": "dist/lost.png",
+      "thumb": "src/lost.png",
+      "title": "Lost"
+    },
+    {
+      "src": "dist/maybe.png",
+      "thumb": "src/maybe.png",
+      "title": "Maybe"
+    },
+    {
+      "src": "dist/melting.png",
+      "thumb": "src/melting.png",
+      "title": "Melting"
+    },
+    {
+      "src": "dist/mythoughtsonwriting.png",
+      "thumb": "src/mythoughtsonwriting.png",
+      "title": "My Thoughts on Writing"
+    },
+    {
+      "src": "dist/nothing.png",
+      "thumb": "src/nothing.png",
+      "title": "Nothing"
+    },
+    {
+      "src": "dist/paths.png",
+      "thumb": "src/paths.png",
+      "title": "Paths"
+    },
+    {
+      "src": "dist/pure.png",
+      "thumb": "src/pure.png",
+      "title": "Pure"
+    },
+    {
+      "src": "dist/reflection.png",
+      "thumb": "src/reflection.png",
+      "title": "Reflection"
+    },
+    {
+      "src": "dist/remember.png",
+      "thumb": "src/remember.png",
+      "title": "Remember"
+    },
+    {
+      "src": "dist/ripples.png",
+      "thumb": "src/ripples.png",
+      "title": "Ripples"
+    },
+    {
+      "src": "dist/roots.png",
+      "thumb": "src/roots.png",
+      "title": "Roots"
+    },
+    {
+      "src": "dist/run.png",
+      "thumb": "src/run.png",
+      "title": "Run"
+    },
+    {
+      "src": "dist/sandcastle.png",
+      "thumb": "src/sandcastles.png",
+      "title": "Sandcastle"
+    },
+    {
+      "src": "dist/shapeless.png",
+      "thumb": "src/shapeless.png",
+      "title": "Shapeless"
+    },
+    {
+      "src": "src/somethingsneverchange.png",
+      "thumb": "src/somethingsneverchange.png",
+      "title": "Some Things Never Change"
+    },
+    {
+      "src": "dist/sowing.png",
+      "thumb": "src/sowing.png",
+      "title": "Sowing"
+    },
+    {
+      "src": "dist/spirit.png",
+      "thumb": "src/spirit.png",
+      "title": "Spirit"
+    },
+    {
+      "src": "dist/steps.png",
+      "thumb": "src/steps.png",
+      "title": "Steps"
+    },
+    {
+      "src": "dist/still.png",
+      "thumb": "src/still.png",
+      "title": "Still"
+    },
+    {
+      "src": "dist/thebells.png",
+      "thumb": "src/bells.png",
+      "title": "The Bells"
+    },
+    {
+      "src": "dist/thecompass.png",
+      "thumb": "src/thecompass.png",
+      "title": "The Compass"
+    },
+    {
+      "src": "dist/theebbandflow.png",
+      "thumb": "src/ebbandflow.png",
+      "title": "The Ebb and Flow"
+    },
+    {
+      "src": "dist/thegates.png",
+      "thumb": "src/gates.png",
+      "title": "The Gates"
+    },
+    {
+      "src": "dist/thehum.png",
+      "thumb": "src/thehum.png",
+      "title": "The Hum"
+    },
+    {
+      "src": "dist/thekiss.png",
+      "thumb": "src/thekiss.png",
+      "title": "The Kiss"
+    },
+    {
+      "src": "dist/thelantern.png",
+      "thumb": "src/lantern.png",
+      "title": "The Lantern"
+    },
+    {
+      "src": "dist/thestorm.png",
+      "thumb": "src/thestorm.png",
+      "title": "The Storm"
+    },
+    {
+      "src": "dist/thetransition.png",
+      "thumb": "src/thetransition.png",
+      "title": "The Transition"
+    },
+    {
+      "src": "dist/thetrees.png",
+      "thumb": "src/thetrees.png",
+      "title": "The Trees"
+    },
+    {
+      "src": "dist/thewind.png",
+      "thumb": "src/thewind.png",
+      "title": "The Wind"
+    },
+    {
+      "src": "dist/tobeacoffeecup.png",
+      "thumb": "src/coffee.png",
+      "title": "To Be a Coffee Cup"
+    },
+    {
+      "src": "dist/tobottlethewind.png",
+      "thumb": "src/bottlethewind.png",
+      "title": "To Bottle the Wind"
+    },
+    {
+      "src": "dist/tolaydowntracks.png",
+      "thumb": "src/tracks.png",
+      "title": "To Lay Down Tracks"
+    },
+    {
+      "src": "dist/transformation.png",
+      "thumb": "src/transformation.png",
+      "title": "Transformation"
+    },
+    {
+      "src": "dist/uncaged.png",
+      "thumb": "src/uncaged.png",
+      "title": "Uncaged"
+    },
+    {
+      "src": "dist/understanding.png",
+      "thumb": "src/understanding.png",
+      "title": "Understanding"
+    },
+    {
+      "src": "dist/warmth.png",
+      "thumb": "src/warmth.png",
+      "title": "Warmth"
+    },
+    {
+      "src": "dist/wesat.png",
+      "thumb": "src/wesat.png",
+      "title": "We Sat"
+    },
+    {
+      "src": "dist/words.png",
+      "thumb": "src/words.png",
+      "title": "Words"
+    },
+    {
+      "src": "dist/wrappingpaper.png",
+      "thumb": "src/wrappingpaper.png",
+      "title": "Wrapping Paper"
+    }
+  ],
+  "woodworking": [
+    [
+      "Inlay1.png",
+      "Inlay2.png",
+      "Camper1.png",
+      "Camper2.png",
+      "Box.png",
+      "Incense.png",
+      "LetterOpener.jpeg",
+      "Pen.jpeg",
+      "bowl0.jpeg",
+      "bowl.jpeg",
+      "BottleOpenerSTart.jpeg",
+      "bottleopenFinished.jpeg",
+      "BigCupWood.jpeg",
+      "BigCup0.jpeg",
+      "BigCup.jpeg",
+      "CandleStick.jpeg",
+      "CandleStick0.jpeg",
+      "Cup0.jpeg",
+      "Cup.jpeg",
+      "lidTop.jpeg",
+      "pizza0.jpeg",
+      "PIzzaHandle.jpeg",
+      "Pizza.jpeg",
+      "rollingpin.jpeg",
+      "RollingPinDone.jpeg",
+      "Frame.jpeg",
+      "Mnts.jpeg"
+    ]
+  ],
+  "stringart": [
+    [
+      "string-1.jpg",
+      "string-4.jpg",
+      "string-2.jpg",
+      "string-3.jpg",
+      "string-5.jpg",
+      "string-6.jpg",
+      "string-7.jpg",
+      "string-8.jpg",
+      "string-9.jpg",
+      "string-10.jpg",
+      "string-11.jpg",
+      "string-12.jpg"
+    ]
+  ],
+  "stainedglass": [
+    [
+      "ducks/ducks-1.jpg",
+      "ducks/ducks-2.jpg",
+      "ducks/ducks-3.jpg",
+      "ducks/ducks-4.jpg",
+      "ducks/ducks-5.jpg",
+      "ducks/ducks-6.jpg",
+      "ducks/ducks-7.jpg",
+      "ducks/ducks-8.jpg",
+      "ducks/ducks-9.jpg",
+      "ducks/ducks-10.jpg",
+      "ducks/ducks-11.jpg",
+      "ducks/ducks-12.jpg",
+      "ducks/ducks-13.jpg",
+      "ducks/ducks-18.jpg",
+      "ducks/ducks-14.jpg",
+      "ducks/ducks-15.jpg",
+      "ducks/ducks-17.jpg",
+      "ducks/ducks-16.jpg"
+    ],
+    [
+      "Wineyard/original.jpeg",
+      "Wineyard/project.jpeg",
+      "Wineyard/finished.jpeg",
+      "Wineyard/finished2.jpeg"
+    ],
+    [
+      "sunandmoon/sunmoon-0.jpg",
+      "sunandmoon/sunmoon-1.jpg",
+      "sunandmoon/sunmoon-2.jpg",
+      "sunandmoon/sunmoon-3.jpg"
+    ],
+    [
+      "kaledioscope/scope-1.jpg",
+      "kaledioscope/scope-2.jpg",
+      "kaledioscope/scope-3.jpg",
+      "kaledioscope/scope-4.jpg",
+      "kaledioscope/scope-5.jpg",
+      "kaledioscope/scope-6.jpg",
+      "kaledioscope/scope-7.jpg"
+    ]
+  ],
+  "papers": [
+    {
+      "href": "https://www.mdpi.com/1424-8220/22/1/96",
+      "title": "Artifacts in EEG-based BCI therapies: friend or foe?"
+    },
+    {
+      "href": "https://www.biorxiv.org/content/10.1101/2021.09.28.462120v1",
+      "title": "Real-time decoding of five finger movements from two EMG channels for XR human-computer interaction"
+    },
+    {
+      "href": "McDermott%202021%20Manuscript%20Final.pdf",
+      "title": "Predicting motor behavior: an EEG pipeline to detect relevant brain states"
+    },
+    {
+      "href": "TMSdepression.pdf",
+      "title": "Brain oscillation-synchronized stimulation in depression using real-time EEG-triggered TMS"
+    },
+    {
+      "href": "McDermottHimmelbach2019.pdf",
+      "title": "A low-cost virtual reality paradigm to map movement behavior"
+    },
+    {
+      "href": "OpenSourceWorkshop.pdf",
+      "title": "Building and Hacking Open Source Hardware"
+    },
+    {
+      "href": "NeuralNetworks.pdf",
+      "title": "Neural Networks and Light"
+    },
+    {
+      "href": "VisionRestorationViaOptogenetics.pdf",
+      "title": "Vision Restoration Via Optogenetics"
+    },
+    {
+      "href": "The%20Potential%20of%20Multisensory%20Processing.pdf",
+      "title": "The Potential of Multisensory Processing"
+    }
+  ],
+  "videos": [
+    {
+      "title": "havasupai",
+      "id": "faCWJX9gSmc"
+    },
+    {
+      "title": "high tatras",
+      "id": "r5bhRHGOPc8"
+    },
+    {
+      "title": "montblanc",
+      "id": "3hgKVOr9oLg"
+    },
+    {
+      "title": "Kayak",
+      "id": "Ib2eFXrEloA"
+    },
+    {
+      "title": "100-400 cine",
+      "id": "X14o9BL8oZU"
+    },
+    {
+      "title": "how to grill a wurst!",
+      "id": "kiCCHPRix1o"
+    },
+    {
+      "title": "slovenia excursion",
+      "id": "N82WcAZZrO8"
+    },
+    {
+      "title": "trier bikeride",
+      "id": "qUlZkCcxHfw"
+    },
+    {
+      "title": "bastei bridge",
+      "id": "1lZekyYBCMc"
+    },
+    {
+      "title": "schwarzwald",
+      "id": "vf5LTSHhhVY"
+    },
+    {
+      "title": "wurmlinger kapelle",
+      "id": "FlJubdpe0-M"
+    }
+  ]
+}

@@ -3,61 +3,85 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#05070f">
-  <meta name="description" content="The work and worlds of Eric James McDermott.">
-  <title>Eric James McDermott — Explorer, maker, scientist</title>
-  <style>
-    :root { color-scheme: dark; --ink: #f6f8ff; --muted: #aab4cc; --line: rgba(255,255,255,.18); }
-    * { box-sizing: border-box; }
-    html { background: #05070f; }
-    body { min-width: 320px; margin: 0; overflow-x: hidden; background: radial-gradient(circle at 50% 22%, #122a60 0, #08112b 27%, transparent 52%), #05070f; color: var(--ink); font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
-    a { color: inherit; }
-    .skip { position: fixed; top: -4rem; left: 1rem; z-index: 20; padding: .7rem 1rem; background: white; color: #05070f; border-radius: 0 0 .5rem .5rem; }
-    .skip:focus { top: 0; }
-    .masthead { display: flex; justify-content: space-between; align-items: center; max-width: 1240px; margin: 0 auto; padding: 1.35rem 2rem; letter-spacing: .12em; text-transform: uppercase; font-size: .71rem; }
-    .masthead__name { font-weight: 800; text-decoration: none; }
-    .site-links { display: flex; align-items: center; gap: 1rem; }
-    .masthead__tag { color: var(--muted); }
-    .cv-link { padding-bottom: .2rem; border-bottom: 1px solid rgba(255,255,255,.5); color: var(--ink); font-weight: 800; text-decoration: none; }
-    .cv-link:hover, .cv-link:focus-visible { border-color: #8db9ff; color: #8db9ff; }
-    main { max-width: 1240px; margin: 0 auto; padding: clamp(.75rem, 2vw, 1.75rem) 2rem 2.25rem; }
-    .worlds { position: relative; width: min(100%, 860px); aspect-ratio: 1495 / 1894; margin: clamp(1.25rem, 1vw, 2rem) auto 0; isolation: isolate; }
-    .worlds::before { content: ""; position: absolute; inset: 2% -9%; z-index: -1; border-radius: 50%; background: radial-gradient(ellipse, rgba(35,89,255,.3), transparent 66%); filter: blur(28px); animation: pulse 7s ease-in-out infinite; }
-    .worlds__image { display: block; width: 100%; height: 100%; object-fit: contain; filter: contrast(1.08) saturate(1.08); }
-    .world { position: absolute; display: grid; place-items: center; width: 27%; aspect-ratio: 1; border: 1px solid transparent; border-radius: 50%; text-decoration: none; transition: transform .35s ease, border-color .35s ease, box-shadow .35s ease; outline-offset: 7px; }
-    .world::after { content: "Explore ↗"; opacity: 0; position: absolute; bottom: 17%; padding: .32rem .5rem; border: 1px solid var(--line); border-radius: 999px; background: rgba(5,7,15,.72); backdrop-filter: blur(8px); color: white; font-size: clamp(.52rem, 1.1vw, .7rem); font-weight: 700; letter-spacing: .08em; text-transform: uppercase; transition: opacity .25s ease, transform .25s ease; transform: translateY(5px); }
-    .world:hover, .world:focus-visible { transform: scale(1.07); border-color: rgba(255,255,255,.9); box-shadow: 0 0 0 8px rgba(106,151,255,.18), 0 0 42px rgba(106,151,255,.45); }
-    .world:hover::after, .world:focus-visible::after { opacity: 1; transform: translateY(0); }
-    .business { left: 36.5%; top: 7.2%; }
-    .science { left: 7.7%; top: 36.6%; }
-    .adventure { right: 7.2%; top: 36.1%; }
-    .art { left: 36.5%; bottom: 7.7%; }
-    .footer { display: flex; justify-content: space-between; gap: 1rem; align-items: center; max-width: 1240px; margin: 0 auto; padding: 1.5rem 2rem 2.5rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .8rem; }
-    .contact { padding: .75rem 1rem; border: 1px solid rgba(255,255,255,.55); border-radius: 999px; color: white; font-weight: 700; letter-spacing: .05em; text-decoration: none; text-transform: uppercase; transition: background .2s ease, color .2s ease; }
-    .contact:hover, .contact:focus-visible { background: white; color: #05070f; }
-    @keyframes pulse { 50% { transform: scale(1.08); opacity: .62; } }
-    @media (max-width: 600px) { .masthead, main, .footer { padding-left: 1.15rem; padding-right: 1.15rem; } .masthead__tag { display: none; } .footer { flex-direction: column; align-items: flex-start; } }
-    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; } }
-  </style>
+  <meta name="theme-color" content="#111310">
+  <meta name="description" content="Eric James McDermott. Scientist, maker, and explorer. A meeting point for business, science, adventure, and art.">
+  <title>Eric James McDermott — A curious kind of human.</title>
+  <link rel="icon" href="assets/home/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/home/space-grotesk-semibold.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="home.css?v=7f0f03987f">
+  <link rel="stylesheet" href="site.css?v=a22054218e">
+  <script src="site.js?v=b0b0f9573d" defer></script>
+  <script src="home.js?v=ad04833da7" defer></script>
 </head>
-<body>
-  <a class="skip" href="#worlds">Skip to worlds</a>
-  <header class="masthead">
-    <a class="masthead__name" href="/">Eric James McDermott</a>
-    <nav class="site-links" aria-label="Site links"><span class="masthead__tag">Business · Science · Adventure · Art</span><a class="cv-link" href="science/EJM-CV.pdf" target="_blank" rel="noopener">CV ↗</a></nav>
-  </header>
+<body id="top">
+  <a class="skip-link" href="#worlds">Skip to the worlds</a>
+  <div class="reading-progress" aria-hidden="true"></div>
+  <header class="universe-header">
+  <a class="wordmark" href="./" aria-label="Eric James McDermott home">EJM<span class="brand-star" aria-hidden="true">✳</span></a>
+  <span class="universe-name">ERIC JAMES<br>McDERMOTT</span>
+  <nav class="universe-nav" aria-label="Explore the worlds"><a href="./business/"><span>01</span> Business</a><a href="./science/"><span>02</span> Science</a><a href="./adventure/"><span>03</span> Adventure</a><a href="./art/"><span>04</span> Art</a></nav>
+  <a class="universe-contact" href="mailto:EricJamesMcDermott@gmail.com">Say hello <span aria-hidden="true">↗</span></a>
+</header>
   <main>
-    <nav class="worlds" id="worlds" aria-label="Explore Eric's work">
-      <img class="worlds__image" src="websiteBackground.png" alt="Four intersecting worlds representing business, science, adventure, and art.">
-      <a class="world business" href="business/" aria-label="Explore business"></a>
-      <a class="world science" href="science/" aria-label="Explore science"></a>
-      <a class="world adventure" href="adventure/" aria-label="Explore adventure"></a>
-      <a class="world art" href="art/" aria-label="Explore art"></a>
-    </nav>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-topline eyebrow"><span><i class="status-dot"></i> A PERSONAL UNIVERSE</span><span>ALWAYS A WORK IN PROGRESS</span></div>
+      <div class="hero-copy">
+        <h1 id="hero-title"><span class="title-line">A curious</span><span class="title-line">kind of</span><span class="title-line title-accent">human<span class="title-period">.</span></span></h1>
+        <p>Scientist. Maker. Explorer.<br>Connecting dots that don’t usually meet.</p>
+        <a class="round-link" href="#worlds"><span class="round-arrow" aria-hidden="true">↓</span><span>STEP INTO MY WORLDS</span></a>
+      </div>
+      <a class="sculpture sculpture-portal" id="sculpture" href="business/" aria-label="Enter Business — products, ventures, and pitches">
+        <div class="sculpture-halo" aria-hidden="true"></div>
+        <svg class="sculpture-fallback" viewBox="0 0 600 600" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1"><ellipse cx="300" cy="300" rx="190" ry="95"/><ellipse cx="300" cy="300" rx="190" ry="95" transform="rotate(30 300 300)"/><ellipse cx="300" cy="300" rx="190" ry="95" transform="rotate(60 300 300)"/><ellipse cx="300" cy="300" rx="190" ry="95" transform="rotate(90 300 300)"/><ellipse cx="300" cy="300" rx="190" ry="95" transform="rotate(120 300 300)"/><ellipse cx="300" cy="300" rx="190" ry="95" transform="rotate(150 300 300)"/></g></svg>
+        <canvas id="world-sculpture" aria-hidden="true"></canvas>
+        <div class="sculpture-cross cross-one" aria-hidden="true">+</div><div class="sculpture-cross cross-two" aria-hidden="true">+</div>
+        <span class="sculpture-note eyebrow"><span class="pointer-hint">HOVER A WORLD TO PREVIEW.<br>CLICK TO ENTER.</span><span class="touch-hint">CHOOSE A WORLD.<br>TAP TO ENTER.</span></span>
+        <div class="portal-caption"><span class="portal-kicker eyebrow" id="sculpture-caption">01 / BUSINESS</span><span class="portal-action"><span id="portal-title">Enter Business</span><span aria-hidden="true">↗</span></span><span class="portal-description" id="portal-description">Products, ventures, and ideas put into practice.</span></div>
+      </a>
+      <div class="hero-bottom">
+        <nav class="world-selector" aria-label="Explore four worlds">
+          <a class="world-select is-active" href="business/" data-world="0"><span>01</span> Business <b aria-hidden="true">↗</b></a>
+          <a class="world-select" href="science/" data-world="1"><span>02</span> Science <b aria-hidden="true">↗</b></a>
+          <a class="world-select" href="adventure/" data-world="2"><span>03</span> Adventure <b aria-hidden="true">↗</b></a>
+          <a class="world-select" href="art/" data-world="3"><span>04</span> Art <b aria-hidden="true">↗</b></a>
+        </nav>
+        <button class="motion-toggle" type="button" aria-pressed="false" hidden><span class="motion-bars" aria-hidden="true"><i></i><i></i><i></i></span><span class="motion-label">Pause motion</span></button>
+      </div>
+    </section>
+    <section class="intro section-pad" id="about" aria-labelledby="intro-title">
+      <div class="section-kicker eyebrow reveal"><span>01 / THE HUMAN</span><span class="asterisk" aria-hidden="true">✳</span></div>
+      <div class="intro-body">
+        <h2 class="reveal" id="intro-title">Good things happen<br>at the <span class="serif-word">intersection.</span></h2>
+        <div class="intro-detail reveal"><p>I’m Eric. I explore how brains work, build ideas into real things, get a little lost in the world, and make things with my hands.</p><p>Different pursuits. Same instinct.<br>Follow the question. See where it goes.</p><a class="text-link" href="science/EJM-CV.pdf" target="_blank" rel="noopener">A little more about me — the CV <span aria-hidden="true">↗</span></a></div>
+      </div>
+    </section>
+    <div class="ticker" aria-hidden="true"><div class="ticker-track"><span>STAY CURIOUS <b>✳</b> MAKE CONNECTIONS <b>✳</b> GO SOMEWHERE NEW <b>✳</b> </span><span>STAY CURIOUS <b>✳</b> MAKE CONNECTIONS <b>✳</b> GO SOMEWHERE NEW <b>✳</b> </span></div></div>
+    <section class="worlds section-pad" id="worlds" aria-labelledby="worlds-title">
+      <div class="section-kicker eyebrow reveal"><span>02 / CHOOSE A DIRECTION</span><span>FOUR WAYS IN. NO WRONG TURNS.</span></div>
+      <div class="worlds-heading reveal"><h2 id="worlds-title">Same mind.<br>Different worlds.</h2><span class="worlds-symbol" aria-hidden="true">↙</span></div>
+      <div class="world-list">
+        <a class="world-row reveal" href="business/" data-world="0"><span class="world-number">01 /</span><div class="world-name"><h3>Business</h3><span>IDEAS INTO ACTION</span></div><p>Ventures, products, and<br>things that move us forward.</p><span class="world-preview business-preview" aria-hidden="true"><span>What<br>if<span class="accent-dot">?</span></span></span><span class="world-arrow" aria-hidden="true">↗</span></a>
+        <a class="world-row reveal" href="science/" data-world="1"><span class="world-number">02 /</span><div class="world-name"><h3>Science</h3><span>FOLLOW THE QUESTION</span></div><p>Brains, behavior, and<br>new ways to connect.</p><span class="world-preview science-preview" aria-hidden="true"><svg viewBox="0 0 240 150"><path d="M0 75h30l8-15 9 40 12-67 12 85 13-58 10 15h30l8-15 9 40 12-67 12 85 13-58 10 15h50"/></svg></span><span class="world-arrow" aria-hidden="true">↗</span></a>
+        <a class="world-row reveal" href="adventure/" data-world="2"><span class="world-number">03 /</span><div class="world-name"><h3>Adventure</h3><span>TAKE THE LONG WAY</span></div><p>Places, perspectives, and<br>a life outside the lines.</p><span class="world-preview" aria-hidden="true"><img src="assets/home/photograph-76-1200.webp" srcset="assets/home/photograph-76-600.webp 600w, assets/home/photograph-76-1200.webp 1200w" sizes="(max-width: 720px) 90vw, 52vw" alt="" loading="lazy" width="320" height="220"></span><span class="world-arrow" aria-hidden="true">↗</span></a>
+        <a class="world-row reveal" href="art/" data-world="3"><span class="world-number">04 /</span><div class="world-name"><h3>Art</h3><span>MAKE SOMETHING REAL</span></div><p>Light, wood, words,<br>and a different way of seeing.</p><span class="world-preview" aria-hidden="true"><img src="assets/home/ducks-in-flight-final-1200.webp" srcset="assets/home/ducks-in-flight-final-600.webp 600w, assets/home/ducks-in-flight-final-1200.webp 1200w" sizes="(max-width: 720px) 90vw, 46vw" alt="" loading="lazy" width="320" height="220"></span><span class="world-arrow" aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+    <section class="fieldnotes section-pad" aria-labelledby="fieldnotes-title">
+      <div class="section-kicker eyebrow reveal"><span>03 / A FEW THINGS ALONG THE WAY</span><span>FROM THE LAB TO THE LANDSCAPE</span></div>
+      <div class="fieldnotes-heading reveal"><h2 id="fieldnotes-title">Out of my head.<br>Into the world.</h2><p>A few rabbit holes<br>worth falling into.</p></div>
+      <div class="project-grid">
+        <a class="project project-wide reveal" href="https://ejm.photography" target="_blank" rel="noopener noreferrer"><div class="project-image"><img src="assets/home/photograph-76-1200.webp" srcset="assets/home/photograph-76-600.webp 600w, assets/home/photograph-76-1200.webp 1200w" sizes="(max-width: 720px) 90vw, 52vw" alt="Photograph 76 from Eric’s photography collection" loading="lazy" width="1200" height="800"><span class="project-badge">OPEN PHOTOGRAPHY ↗</span></div><div class="project-meta"><span>01 / ADVENTURE &amp; ART</span><span aria-hidden="true">↗</span></div><h3>A different point of view.</h3><p>Photographs from a world worth paying attention to.</p></a>
+        <a class="project project-lab reveal" href="science/"><div class="project-image lab-art" aria-hidden="true"><div class="lab-orbits"><i></i><i></i><i></i><i></i><i></i><b></b></div><span class="lab-art-label">SIGNAL → UNDERSTANDING</span><span class="project-badge">ENTER THE LAB ↗</span></div><div class="project-meta"><span>02 / SCIENCE</span><span aria-hidden="true">↗</span></div><h3>The human connection.</h3><p>Neuroscience, virtual reality, and movement.</p></a>
+        <a class="project project-craft reveal" href="stainedglass/"><div class="project-image"><img src="assets/home/ducks-in-flight-final-1200.webp" srcset="assets/home/ducks-in-flight-final-600.webp 600w, assets/home/ducks-in-flight-final-1200.webp 1200w" sizes="(max-width: 720px) 90vw, 46vw" alt="Ducks in Flight 18, handmade stained glass by Eric" loading="lazy" width="900" height="650"><span class="project-badge">EXPLORE DUCKS IN FLIGHT ↗</span></div><div class="project-meta"><span>03 / ART &amp; CRAFT</span><span aria-hidden="true">↗</span></div><h3>A little light. A new perspective.</h3><p>Working with my hands. Thinking in color.</p></a>
+        <div class="more-paths reveal"><span class="asterisk" aria-hidden="true">✳</span><h3>There’s always<br>another thread.</h3><nav aria-label="More things to explore"><a href="business/babybaby/">BabyBaby app <span aria-hidden="true">↗</span></a><a href="woodworking/">Woodworking <span aria-hidden="true">↗</span></a><a href="stringart/">String art <span aria-hidden="true">↗</span></a><a href="writings/">Writings <span aria-hidden="true">↗</span></a><a href="games/">Games &amp; experiments <span aria-hidden="true">↗</span></a><a href="worldmap/">Where I’ve been <span aria-hidden="true">↗</span></a><a href="video/">Films &amp; video <span aria-hidden="true">↗</span></a></nav></div>
+      </div>
+    </section>
+    <footer class="footer section-pad" id="contact">
+      <div class="section-kicker eyebrow"><span>GOT A QUESTION, AN IDEA, OR A GOOD STORY?</span><a href="#top" class="back-top">BACK TO TOP ↑</a></div>
+      <a class="footer-hello" href="mailto:EricJamesMcDermott@gmail.com"><span>Let’s connect<span class="footer-period">.</span></span><span class="footer-arrow" aria-hidden="true">↗</span></a>
+      <div class="footer-bottom"><span>© <span id="year">2026</span> ERIC JAMES McDERMOTT</span><span>MADE OF MANY INTERESTS.</span><nav aria-label="Social and professional links"><a href="https://www.linkedin.com/in/ejmcdermott/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="science/EJM-CV.pdf" target="_blank" rel="noopener">CV ↗</a><a href="mailto:EricJamesMcDermott@gmail.com" id="footer-email">Email ↗</a></nav></div>
+    </footer>
   </main>
-  <footer class="footer">
-    <span>© Eric James McDermott</span>
-    <a class="contact" href="mailto:EricJamesMcDermott@gmail.com">Start a conversation</a>
-  </footer>
 </body>
 </html>
