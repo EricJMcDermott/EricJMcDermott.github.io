@@ -28,6 +28,14 @@
 .world-page[data-world="business"] .page-hero-copy>.eyebrow { margin-bottom: 10px; }
 .world-page[data-world="business"] .page-hero h1 { font-size: clamp(46px, 5vw, 70px); }
 .world-page[data-world="business"] .page-description { max-width: 850px; margin-top: 10px; }
+.world-page[data-world="business"] .meucci-feature { height: 220px; background: #d9e2d8; border-color: #8da898; }
+.world-page[data-world="business"] .meucci-feature>img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s; }
+.world-page[data-world="business"] .meucci-feature:hover>img { transform: scale(1.04); }
+.world-page[data-world="business"] .meucci-feature .feature-topline { color: #223d33; }
+.world-page[data-world="business"] .meucci-feature .feature-topline>span { color: #4c675b; }
+.world-page[data-world="business"] .meucci-feature .feature-caption { padding: 28px 18px 14px; font-size: 19px; }
+.world-page[data-world="business"] .meucci-feature .feature-caption small { margin-top: 3px; }
+.world-page[data-world="business"] .meucci-feature .feature-arrow { width: 34px; height: 34px; flex-basis: 34px; font-size: 20px; }
 .world-page[data-world="business"] #collection { padding-top: 28px; }
 .world-page[data-world="business"] #collection .content-heading { margin-bottom: 24px; }
 .world-page[data-world="business"] #collection .content-heading .eyebrow { margin-bottom: 8px; }
@@ -35,6 +43,8 @@
 .world-page[data-world="business"] .work-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; }
 @media (max-width: 1050px) { .world-page[data-world="business"] .work-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 600px) {
+  .world-page[data-world="business"] .page-hero-grid { gap: 16px; }
+  .world-page[data-world="business"] .meucci-feature { height: 150px; }
   .world-page[data-world="business"] .work-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 12px; }
   .world-page[data-world="business"] .work-image { aspect-ratio: 1.55; }
   .world-page[data-world="business"] .work-enter { width: 30px; height: 30px; right: 7px; bottom: 7px; font-size: 18px; }
