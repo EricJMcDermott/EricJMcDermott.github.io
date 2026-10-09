@@ -142,7 +142,9 @@
       const link = group[index];
       image.alt = link.dataset.caption || link.querySelector('img')?.alt || '';
       image.src = link.href;
-      caption.textContent = `${image.alt} · ${index + 1} / ${group.length}`;
+      caption.textContent = link.hasAttribute('data-hide-caption')
+        ? `${index + 1} / ${group.length}`
+        : `${image.alt} · ${index + 1} / ${group.length}`;
       original.href = link.href;
     }
     function move(delta) { index = (index + delta + group.length) % group.length; show(); }

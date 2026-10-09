@@ -18,7 +18,9 @@ def version_assets(markup):
         filename=base.split('/')[-1].split('"')[-1]
         version=hashlib.sha256((ROOT/filename).read_bytes()).hexdigest()[:10]
         return base+'?v='+version+'"'
-    return re.sub(r'((?:src|href)="[^"?]*(?:home|site|studio|portfolio|game-player)\.(?:css|js))(?:\?[^"]*)?"',replace,markup)
+    markup = re.sub(r'((?:src|href)="[^"?]*(?:home|site|studio|portfolio|game-player)\.(?:css|js))(?:\?[^"]*)?"', replace, markup)
+    cv_version = hashlib.sha256((ROOT/'science/EJM-CV.pdf').read_bytes()).hexdigest()[:10]
+    return re.sub(r'(href="[^"?]*EJM-CV\.pdf)(?:\?[^"]*)?"', lambda match: match.group(1)+'?v='+cv_version+'"', markup)
 
 
 def nav(prefix, current=''):
@@ -91,7 +93,7 @@ def gallery(items, directory, group, writings=False):
     return '<div class="gallery-grid '+('writing-grid' if writings else '')+'">'+''.join(cards)+'</div><p class="search-empty" data-search-empty hidden>No matching work. Try another word.</p>'
 
 
-def carousel(items, directory, group, limit=None, collection_link=None):
+def carousel(items, directory, group, limit=None, collection_link=None, show_titles=True):
     """A swipeable strip that can open a collection image or lead to its archive."""
     slides=[]
     for i, item in enumerate(items[:limit] if limit else items):
@@ -102,7 +104,9 @@ def carousel(items, directory, group, limit=None, collection_link=None):
         href=collection_link or source
         carousel_group=esc(group+' carousel',quote=True)
         attrs='' if collection_link else f' data-gallery="{carousel_group}" data-caption="{esc(title,quote=True)}"'
-        slides.append(f'<a class="carousel-slide" href="{esc(href,quote=True)}"{attrs} aria-label="{esc(title,quote=True)}"><img src="{esc(thumb,quote=True)}" alt="{esc(title,quote=True)}" loading="lazy" width="800" height="600"><span class="carousel-slide-title">{esc(title)}</span></a>')
+        if not show_titles: attrs+=' data-hide-caption'
+        visible_title=f'<span class="carousel-slide-title">{esc(title)}</span>' if show_titles else ''
+        slides.append(f'<a class="carousel-slide" href="{esc(href,quote=True)}"{attrs} aria-label="{esc(title,quote=True)}"><img src="{esc(thumb,quote=True)}" alt="{esc(title,quote=True)}" loading="lazy" width="800" height="600">{visible_title}</a>')
     total=len(slides)
     return f'''<div class="collection-carousel" data-carousel aria-label="{esc(group,quote=True)} carousel">
   <div class="carousel-track" data-carousel-track tabindex="0">{''.join(slides)}</div>
@@ -116,7 +120,7 @@ def cover(image, target, label, detail):
 
 # The four hubs: one visual system, with content and actions specific to each world.
 phone_feature='''<a class="hero-feature phone-feature" href="babybaby/"><div class="feature-topline eyebrow">FEATURED PROJECT <span>01 / PRODUCT</span></div><img src="../business/baby-app-images/BabyBabyApp_page1.png" alt="BabyBaby daily care tracker"><div class="feature-caption"><span>BabyBaby<small>A companion for new parents.</small></span><span class="feature-arrow" aria-hidden="true">↗</span></div></a>'''
-business_cards = '<div class="work-grid">'+card('../work/applied-ai/','../assets/work/knowledge-map.svg','Applied AI at diconium','AI products, hands-on engineering, and cross-functional team leadership.','AI / PRODUCT / LEADERSHIP')+card('../work/meuccitech/','../assets/work/audio-pipeline.svg','Meuccitech','From voice AI to a commercial audiobook production business.','FOUNDER / CEO')+card('../work/babybaby/','../business/baby-app-images/BabyBabyApp_page1.png','BabyBaby','A parents’ companion, from concept through launch.','PRODUCT / APP',True)+card('../work/rehality/','../assets/work/rehality-loop.svg','Rehality','Connecting neuroscience, XR, and a four-partner research consortium.','RESEARCH / LEADERSHIP')+'</div>'
+business_cards = '<div class="work-grid">'+card('../work/applied-ai/','../assets/work/knowledge-map.svg','Applied AI at diconium','AI products, hands-on engineering, and cross-functional team leadership.','AI / PRODUCT / LEADERSHIP')+card('../work/meuccitech/','../assets/work/audio-pipeline.svg','Meuccitech','From voice AI to a commercial audiobook production business.','FOUNDER / HEAD OF PRODUCT')+card('../work/babybaby/','../business/baby-app-images/BabyBabyApp_page1.png','BabyBaby','A parents’ companion, from concept through launch.','PRODUCT / APP',True)+card('../work/rehality/','../assets/work/rehality-loop.svg','Rehality','Connecting neuroscience, XR, and a four-partner research consortium.','RESEARCH / LEADERSHIP')+'</div>'
 business = section(business_cards,'From idea to everyday.','01 / VENTURES & PRODUCTS')
 business += section('<div class="film-grid">'+video('UgrSs2XZVqs','Rehality — MedTech Startup School · Second place')+video('_RgH6a_CNj0','Prometheus Science — MedTech Startup School · First place')+'</div>','Make the case.','02 / PITCHES & PRESENTATIONS',id='presentations',light=False)
 business += section('<div class="resource-list"><a class="resource" href="../science/EJM-CV.pdf" target="_blank" rel="noopener"><span>01</span><h3>Curriculum vitae</h3><small>PDF ↗</small></a><a class="resource" href="https://www.linkedin.com/in/ejmcdermott/" target="_blank" rel="noopener noreferrer"><span>02</span><h3>Let’s connect on LinkedIn</h3><small>LINKEDIN ↗</small></a></div>','Keep the conversation going.','03 / CONNECT',id='connect')
@@ -155,7 +159,7 @@ page('stainedglass','art','Stained glass','Let the<br><em>light in.</em>','Four 
 string_items=[{'src':s,'title':f'String art — {Path(s).stem.split("-")[-1]}'} for s in sorted(DATA['stringart'][0],key=lambda s:int(Path(s).stem.split("-")[-1]))]
 string=section(carousel(string_items,'stringart','String art'),'Time.','THE STRING ART SERIES')+section(video('68juZjc0PI','The Black Sun'),'The Black Sun.','02 / IN MOTION',id='black-sun',light=False)
 page('stringart','art','String art','One thread.<br><em>Many possibilities.</em>','Finding form through repetition. A collection of string art and the process behind it.',string,'','Follow the thread',True)
-portfolio=section(carousel(DATA['portfolio'],'portfolio','Photography'),'Look a little closer.','THE PHOTOGRAPHY ARCHIVE')
+portfolio=section(carousel(DATA['portfolio'],'portfolio','Photography',show_titles=False),'Look a little closer.','THE PHOTOGRAPHY ARCHIVE')
 page('portfolio','adventure','Photography','A different<br><em>point of view.</em>','Landscapes, people, wildlife, and the small details along the way. Photographs by Eric James McDermott.',portfolio,cover('../assets/home/photograph-76-1200.webp','#collection','Photograph 76','Explore the photographs.'),'Explore photographs',True)
 
 # Writings keeps its original, user-preferred gallery page and Lightbox experience.

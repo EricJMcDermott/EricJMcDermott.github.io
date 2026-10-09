@@ -8,7 +8,7 @@ The existing site communicates curiosity and range, but the professional story i
 
 ## Evidence and positioning
 
-Primary source: science/EJM-CV.pdf, the current two-page CV in this repository. It identifies Eric as Principal Specialist AI at diconium, Founder and CEO of Meuccitech, and creator of BabyBaby. It describes hands-on engineering as well as product strategy and cross-functional leadership. The file is already publicly linked by the site; its claims are self-reported rather than independently audited.
+Primary source: science/EJM-CV.pdf, the current two-page CV in this repository. It identifies Eric as Principal Specialist AI at diconium, Founder and Head of Product of Meuccitech, and creator of BabyBaby. It describes hands-on engineering as well as product strategy and cross-functional leadership. The file is already publicly linked by the site; its claims are self-reported rather than independently audited.
 
 Working position: **AI product and technology leader who connects research, engineering, and commercial reality.** The audience question is pending; this position follows the current CV, not an invented job-search status.
 
