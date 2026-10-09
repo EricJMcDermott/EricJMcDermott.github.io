@@ -28,16 +28,6 @@
 .world-page[data-world="business"] .meucci-feature:hover>img { transform: scale(1.42); }
 .world-page[data-world="business"] .meucci-feature .feature-topline { color: #223d33; }
 .world-page[data-world="business"] .meucci-feature .feature-topline>span { color: #4c675b; }
-.world-page[data-world="business"] .work-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; }
-@media (max-width: 1050px) { .world-page[data-world="business"] .work-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 600px) {
-  .world-page[data-world="business"] .work-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 12px; }
-  .world-page[data-world="business"] .work-image { aspect-ratio: 1.55; }
-  .world-page[data-world="business"] .work-enter { width: 30px; height: 30px; right: 7px; bottom: 7px; font-size: 18px; }
-  .world-page[data-world="business"] .work-meta { font-size: 7px; margin: 9px 0 7px; }
-  .world-page[data-world="business"] .work-card h3 { font-size: 18px; }
-  .world-page[data-world="business"] .work-card>p { display: none; }
-}
 .world-page[data-world="science"] { --accent: #8ad6ff; --wash: #d3e3e9; }
 .world-page[data-world="adventure"] { --accent: #ffad5e; --wash: #e7dccb; }
 .world-page[data-world="art"] { --accent: #d1a8ff; --wash: #e1dce9; }
