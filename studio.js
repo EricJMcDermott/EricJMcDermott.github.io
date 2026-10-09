@@ -131,10 +131,26 @@ function startStudio() {
   box(.8,.08,.55,iron,1.18,1.64,-2.15,business);box(.13,.45,.13,iron,1.18,1.87,-2.4,business);
   box(2.18,1.39,.16,iron,1.18,2.54,-2.43,business);
   const screenTex=textTexture(1024,640,(ctx,w,h)=>{
-    ctx.fillStyle='#102b31';ctx.fillRect(0,0,w,h);ctx.fillStyle='#789a95';ctx.font='22px monospace';ctx.fillText('EJM — IDEAS INTO ACTION',52,62);
-    ctx.fillStyle='#c9eee0';ctx.font='bold 88px sans-serif';ctx.fillText('What if?',52,205);ctx.fillStyle='#85c6b2';ctx.font='27px monospace';ctx.fillText('RESEARCH → BUILD → REAL WORLD',52,280);
-    for(let i=0;i<44;i++){const value=Math.sin(i*.4)*Math.cos(i*.12);ctx.fillStyle=i%5?'#4eae95':'#e3bb82';ctx.fillRect(55+i*20,440-value*60,7,30+Math.abs(value)*100);}
-    ctx.fillStyle='#8eaaa4';ctx.font='21px monospace';ctx.fillText('DICONIUM  /  MEUCCITECH  /  BABYBABY',52,593);
+    const background=ctx.createLinearGradient(0,0,w,h);
+    background.addColorStop(0,'#07171c');background.addColorStop(1,'#12343a');
+    ctx.fillStyle=background;ctx.fillRect(0,0,w,h);
+    ctx.strokeStyle='#376367';ctx.lineWidth=2;ctx.strokeRect(26,26,w-52,h-52);
+    ctx.fillStyle='#80b6ad';ctx.font='22px monospace';ctx.fillText('NOW PLAYING  /  01',58,75);
+    ctx.fillStyle='#e9e4d5';ctx.font='bold 90px sans-serif';ctx.fillText('Meuccitech',54,195);
+    ctx.fillStyle='#aaccc3';ctx.font='26px monospace';ctx.fillText('AI AUDIOBOOK PRODUCTION',59,249);
+    const wave=ctx.createLinearGradient(58,0,970,0);
+    wave.addColorStop(0,'#4cbbb4');wave.addColorStop(.5,'#e7c088');wave.addColorStop(1,'#6ed1be');
+    ctx.fillStyle=wave;ctx.shadowColor='#9ce9d0';ctx.shadowBlur=22;
+    for(let i=0;i<65;i++){
+      const x=60+i*14, envelope=.25+.75*Math.pow(Math.sin(Math.PI*i/64),1.3);
+      const pulse=Math.abs(Math.sin(i*.72)*Math.cos(i*.19)+.32*Math.sin(i*1.38));
+      const bar=20+Math.min(1,pulse)*155*envelope;
+      ctx.fillRect(x,378-bar/2,6,bar);
+    }
+    ctx.shadowBlur=0;ctx.fillStyle='#689c94';ctx.fillRect(59,517,906,3);
+    ctx.fillStyle='#e6b87c';ctx.fillRect(59,517,514,3);
+    ctx.beginPath();ctx.arc(573,518,8,0,Math.PI*2);ctx.fill();
+    ctx.fillStyle='#9ab8b1';ctx.font='21px monospace';ctx.fillText('VOICE  ·  HUMAN REVIEW  ·  FINISHED AUDIO',58,585);
   });
   const screen=new THREE.Mesh(new THREE.PlaneGeometry(2.02,1.24),new THREE.MeshBasicMaterial({map:screenTex}));screen.position.set(1.18,2.54,-2.337);business.add(screen);
   box(1.4,.06,.48,cream,1.18,1.63,-1.64,business);
@@ -148,8 +164,8 @@ function startStudio() {
   const bookMats=['#527a72','#b5844b','#bbb59a','#344b5b'].map(c=>material(c));
   for(let i=0;i<6;i++){const h=.43+(i%3)*.13;const book=box(.13,h,.42,bookMats[i%4],-.85+i*.15,1.6+h/2,-2.8);book.rotation.z=i===0?.12:0;}
   cylinder(.12,.1,.22,cream,-1,1.72,-1.60);const handle=new THREE.Mesh(new THREE.TorusGeometry(.085,.025,8,20),cream);handle.position.set(-.88,1.75,-1.6);room.add(handle);
-  // A camera next to the window.
-  const photoCamera=new THREE.Group();photoCamera.position.set(-3,1.75,-2.1);photoCamera.rotation.y=.25;room.add(photoCamera);
+  // The camera lives on the high shelf, where the brass sphere used to be.
+  const photoCamera=new THREE.Group();photoCamera.position.set(3.62,4.16,-3.30);photoCamera.rotation.y=-.18;room.add(photoCamera);
   box(.62,.38,.3,iron,0,0,0,photoCamera);box(.25,.1,.22,iron,0,.22,0,photoCamera);
   const lens=cylinder(.16,.17,.33,iron,0,0,.25,photoCamera);lens.rotation.x=Math.PI/2;
   const lensGlass=cylinder(.125,.125,.014,material('#2b6773',.1,.75),0,0,.42,photoCamera);lensGlass.rotation.x=Math.PI/2;photoCamera.userData.destination='adventure';
@@ -182,7 +198,48 @@ function startStudio() {
   for(let i=0;i<9;i++){const angle=i*2.4;const y=1.15+(i%3)*.48;rod([4.13,.64,.62],[4.13+Math.cos(angle)*.32,y,.62+Math.sin(angle)*.32],.025,leafMat);const leaf=sphere(.24,leafMat,4.13+Math.cos(angle)*.36,y,.62+Math.sin(angle)*.36);leaf.scale.set(.45,1.5,.8);leaf.rotation.z=Math.cos(angle)*.8;}
   cylinder(.41,.41,.12,grain,.15,.85,-.18);for(let i=0;i<3;i++){const a=i*2.094;rod([.15+Math.cos(a)*.24,.81,-.18+Math.sin(a)*.24],[.15+Math.cos(a)*.39,.17,-.18+Math.sin(a)*.39],.055,iron);}
   box(2.5,.10,.46,grain,2.7,3.84,-3.25);for(let i=0;i<5;i++){box(.22,.43+(i%2)*.13,.3,bookMats[i%4],2.05+i*.23,4.11+(i%2)*.065,-3.25);}
-  sphere(.18,brass,3.68,4.05,-3.22);
+  // Volleyball: six curved faces, each divided into three stitched panels.
+  const volleyball=new THREE.Group();volleyball.position.set(-3.45,.67,2.72);volleyball.rotation.set(.3,.4,-.25);room.add(volleyball);
+  sphere(.49,material('#b5ac95'),0,0,0,volleyball);
+  const panelMats=[material('#ebe3ca'),material('#315a82'),material('#e4b650')];
+  const faceAxes=[[[1,0,0],[0,1,0],[0,0,1]],[[-1,0,0],[0,0,1],[0,1,0]],[[0,1,0],[0,0,1],[1,0,0]],[[0,-1,0],[1,0,0],[0,0,1]],[[0,0,1],[1,0,0],[0,1,0]],[[0,0,-1],[0,1,0],[1,0,0]]];
+  faceAxes.forEach(([normal,u,v],face)=>{for(let strip=0;strip<3;strip++){
+    const vertices=[],indices=[],steps=10;
+    for(let y=0;y<=steps;y++)for(let x=0;x<=steps;x++){
+      const a=-1+strip*2/3+.014+x/steps*(2/3-.028),b=-.986+y/steps*1.972;
+      const point=new THREE.Vector3(...normal).addScaledVector(new THREE.Vector3(...u),a).addScaledVector(new THREE.Vector3(...v),b).normalize().multiplyScalar(.502);
+      vertices.push(point.x,point.y,point.z);
+    }
+    for(let y=0;y<steps;y++)for(let x=0;x<steps;x++){const a=y*(steps+1)+x;indices.push(a,a+1,a+steps+1,a+1,a+steps+2,a+steps+1);}
+    const geo=new THREE.BufferGeometry();geo.setAttribute('position',new THREE.Float32BufferAttribute(vertices,3));geo.setIndex(indices);geo.computeVertexNormals();
+    const mat=panelMats[(face+strip)%3].clone();mat.side=THREE.DoubleSide;
+    const panel=new THREE.Mesh(geo,mat);panel.castShadow=true;volleyball.add(panel);
+  }});
+  // A pair of downturned climbing shoes hangs by the heel loops beside the window.
+  const shoes=new THREE.Group();shoes.position.set(-4.66,2.45,2.12);room.add(shoes);
+  const rubber=material('#242b2b'),shoeUpper=material('#d4a34e'),strap=material('#658780');
+  rod([-.30,.72,0],[.03,.72,0],.045,brass,shoes);
+  for(const side of [-1,1]){
+    rod([.03,.72,0],[.06,.20,side*.26],.012,cream,shoes);
+    const shoe=new THREE.Group();shoe.position.set(.08,-.20,side*.26);shoe.rotation.x=side*.10;shoe.rotation.z=.10;shoes.add(shoe);
+    const sole=sphere(.3,rubber,.04,-.08,0,shoe);sole.scale.set(.46,1.65,.63);
+    const upper=sphere(.27,shoeUpper,.13,-.04,0,shoe);upper.scale.set(.6,1.5,.62);
+    const toe=sphere(.19,rubber,.17,-.40,0,shoe);toe.scale.set(.8,.75,.86);
+    const opening=sphere(.13,rubber,.20,.24,0,shoe);opening.scale.set(.5,1,.86);
+    for(const y of [-.04,.10]){const band=box(.055,.075,.33,strap,.285,y,0,shoe);band.rotation.z=-.2;}
+    const loop=new THREE.Mesh(new THREE.TorusGeometry(.065,.018,8,20),strap);loop.position.set(.05,.37,0);loop.rotation.y=Math.PI/2;shoe.add(loop);
+  }
+  // Walnut turntable, grooved vinyl, center label, and a separate tonearm.
+  const turntable=new THREE.Group();turntable.position.set(-2.04,1.70,-2.03);room.add(turntable);
+  box(1.65,.19,1.10,darkWood,0,0,0,turntable);box(1.58,.035,1.04,iron,0,.11,0,turntable);
+  for(const x of [-.65,.65])for(const z of [-.38,.38])cylinder(.075,.075,.07,rubber,x,-.12,z,turntable);
+  cylinder(.48,.48,.065,brass,-.18,.16,0,turntable);
+  cylinder(.45,.45,.026,material('#161c20',.32,.3),-.18,.205,0,turntable);
+  for(let i=0;i<10;i++){const groove=new THREE.Mesh(new THREE.TorusGeometry(.17+i*.026,.003,4,64),material('#3b4446',.35,.25));groove.rotation.x=Math.PI/2;groove.position.set(-.18,.221,0);turntable.add(groove);}
+  cylinder(.13,.13,.029,material('#bc654a'),-.18,.21,0,turntable);cylinder(.018,.018,.06,brass,-.18,.24,0,turntable);
+  cylinder(.075,.075,.10,brass,.61,.18,-.34,turntable);
+  rod([.61,.24,-.34],[.55,.25,.12],.018,brass,turntable);rod([.55,.25,.12],[.25,.25,.27],.018,brass,turntable);
+  box(.14,.045,.065,rubber,.25,.235,.27,turntable);cylinder(.045,.045,.035,brass,.65,.15,.36,turntable);
   // Sparse suspended dust catches the light without obscuring the objects.
   const dustPositions=new Float32Array(80*3);for(let i=0;i<80;i++){dustPositions[i*3]=Math.sin(i*16.1)*4.5;dustPositions[i*3+1]=.6+(i%19)*.22;dustPositions[i*3+2]=Math.cos(i*5.3)*3;}
   const dustGeo=new THREE.BufferGeometry();dustGeo.setAttribute('position',new THREE.BufferAttribute(dustPositions,3));const dust=new THREE.Points(dustGeo,new THREE.PointsMaterial({color:'#d4b786',size:.021,transparent:true,opacity:.45,depthWrite:false}));room.add(dust);
