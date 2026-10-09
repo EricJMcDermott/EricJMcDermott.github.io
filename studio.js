@@ -12,16 +12,17 @@ addEventListener('hashchange',openIndex);openIndex();
 const links = [...document.querySelectorAll('[data-object]')];
 const destinations = Object.fromEntries(links.map(a => [a.dataset.object, a]));
 const notes = {
-  business: ['The workbench / Business', 'AI products, ventures, and ideas put to work.'],
-  science: ['The instrument / Science', 'Neuroscience, movement, and the questions between.'],
-  adventure: ['The window / Adventure', 'Photograph 76. There is always more outside.'],
-  art: ['The glass / Art', 'Ducks in Flight. An idea, made by hand.'],
-  woodworking: ['The wood / Workshop', 'Grain, geometry, and the pleasure of making.'],
-  writings: ['The notebook / Writings', 'Poems, prose, and thoughts along the way.']
+  business: ['Applied AI and Business', 'Products, ventures, and ideas put to work.'],
+  science: ['Science and Research', 'Neuroscience, movement, and the questions between.'],
+  adventure: ['Photography and Adventure', 'Images and experiences from the road.'],
+  art: ['Handmade: glass, wood, string', 'The collection of finished pieces across three materials.'],
+  woodworking: ['The Workshop', 'A closer look at woodworking objects and how they were made.'],
+  writings: ['A Few Words', 'Poems, prose, and thoughts along the way.'],
+  archives: ['The Archives', 'Older stories and writing from the blog.']
 };
 const caption = document.querySelector('#object-caption');
 function describe(key) {
-  const [title, text] = notes[key] || ['Six objects. Six ways in.', 'Choose an object. Follow your curiosity.'];
+  const [title, text] = notes[key] || ['Seven objects. Seven ways in.', 'Choose an object. Follow your curiosity.'];
   caption.replaceChildren(document.createTextNode(title), document.createElement('br'));
   const span = document.createElement('span'); span.textContent = text; caption.append(span);
   links.forEach(a => a.classList.toggle('is-active', a.dataset.object === key));
@@ -197,7 +198,13 @@ function startStudio() {
   const leafMat=material('#4a7760');
   for(let i=0;i<9;i++){const angle=i*2.4;const y=1.15+(i%3)*.48;rod([4.13,.64,.62],[4.13+Math.cos(angle)*.32,y,.62+Math.sin(angle)*.32],.025,leafMat);const leaf=sphere(.24,leafMat,4.13+Math.cos(angle)*.36,y,.62+Math.sin(angle)*.36);leaf.scale.set(.45,1.5,.8);leaf.rotation.z=Math.cos(angle)*.8;}
   cylinder(.41,.41,.12,grain,.15,.85,-.18);for(let i=0;i<3;i++){const a=i*2.094;rod([.15+Math.cos(a)*.24,.81,-.18+Math.sin(a)*.24],[.15+Math.cos(a)*.39,.17,-.18+Math.sin(a)*.39],.055,iron);}
-  box(2.5,.10,.46,grain,2.7,3.84,-3.25);for(let i=0;i<5;i++){box(.22,.43+(i%2)*.13,.3,bookMats[i%4],2.05+i*.23,4.11+(i%2)*.065,-3.25);}
+  box(2.5,.10,.46,grain,2.7,3.84,-3.25);
+  const archives=new THREE.Group();archives.position.set(2.7,0,-3.25);room.add(archives);
+  for(let i=0;i<5;i++){
+    const height=.43+(i%2)*.13;
+    box(.22,height,.3,i===4?brass:bookMats[i%4],-.65+i*.23,3.89+height/2,0,archives);
+  }
+  register('archives',archives,[2.55,4.45,-3.1]);
   // Volleyball: six curved faces, each divided into three stitched panels.
   const volleyball=new THREE.Group();volleyball.position.set(-3.45,.67,2.72);volleyball.rotation.set(.3,.4,-.25);room.add(volleyball);
   sphere(.49,material('#b5ac95'),0,0,0,volleyball);
