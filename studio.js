@@ -5,7 +5,10 @@ const wrap = document.querySelector('#scene-wrap');
 const status = document.querySelector('#room-status');
 const reduce = matchMedia('(prefers-reduced-motion: reduce)');
 let paused = reduce.matches;
-try { paused ||= sessionStorage.getItem('ejm-motion-paused') === 'true'; } catch {}
+
+const menu = document.querySelector('.studio-menu');
+function openIndex(){if(location.hash==='#directory') menu.open=true;}
+addEventListener('hashchange',openIndex);openIndex();
 const links = [...document.querySelectorAll('[data-object]')];
 const destinations = Object.fromEntries(links.map(a => [a.dataset.object, a]));
 const notes = {
@@ -27,7 +30,7 @@ function describe(key) {
 try { startStudio(); } catch (error) {
   console.warn('Studio unavailable; collection links remain available.', error);
   document.body.classList.remove('scene-ready');
-  status.textContent = 'EXPLORE THE COLLECTIONS BELOW ↓';
+  status.textContent = 'USE EXPLORE TO OPEN A COLLECTION';
 }
 
 function startStudio() {
@@ -185,7 +188,7 @@ function startStudio() {
   const dustGeo=new THREE.BufferGeometry();dustGeo.setAttribute('position',new THREE.BufferAttribute(dustPositions,3));const dust=new THREE.Points(dustGeo,new THREE.PointsMaterial({color:'#d4b786',size:.021,transparent:true,opacity:.45,depthWrite:false}));room.add(dust);
 
   let width=1,height=1, hover='', pointer=new THREE.Vector2(), easedPointer=new THREE.Vector2(), entering=false;
-  let lightMode=false, visible=true, frame=0, last=0;
+  let visible=true, frame=0, last=0;
   const raycaster=new THREE.Raycaster();
   const look=new THREE.Vector3();
   const zoomPosition=new THREE.Vector3();
@@ -201,19 +204,14 @@ function startStudio() {
   function enter(key,event){if(!destinations[key]||entering)return;if(event&&(event.ctrlKey||event.metaKey||event.shiftKey||event.altKey||event.button>0))return;if(reduce.matches||paused)return;event?.preventDefault();entering=true;document.body.classList.add('scene-entering');zoomTarget.copy(anchors[key]);zoomPosition.copy(camera.position).lerp(zoomTarget,.38);transitionStart=performance.now();setTimeout(()=>location.assign(destinations[key].href),720);}
   canvas.addEventListener('click',event=>{const key=hit(event);if(key){if(reduce.matches||paused)location.assign(destinations[key].href);else enter(key,event);}});
   links.forEach(a=>{a.addEventListener('pointerenter',()=>setHover(a.dataset.object));a.addEventListener('focus',()=>setHover(a.dataset.object));a.addEventListener('pointerleave',()=>{if(document.activeElement!==a)setHover('');});a.addEventListener('blur',()=>setHover(''));a.addEventListener('click',event=>enter(a.dataset.object,event));});
-  const motionButton=document.querySelector('#motion-toggle');motionButton.hidden=false;
-  function syncMotion(){document.documentElement.classList.toggle('is-paused',paused);motionButton.setAttribute('aria-pressed',String(paused));motionButton.querySelector('span').textContent=paused?'Resume motion':'Pause motion';try{sessionStorage.setItem('ejm-motion-paused',String(paused));}catch{}}
-  motionButton.addEventListener('click',()=>{paused=!paused;syncMotion();});reduce.addEventListener('change',()=>{paused=reduce.matches;syncMotion();});syncMotion();
-  const lightButton=document.querySelector('#light-toggle');lightButton.hidden=false;
-  lightButton.addEventListener('click',()=>{lightMode=!lightMode;lightButton.setAttribute('aria-pressed',String(lightMode));lightButton.querySelector('span').textContent=lightMode?'Evening light':'Morning light';});
-  canvas.addEventListener('webglcontextlost',event=>{event.preventDefault();cancelAnimationFrame(frame);document.body.classList.remove('scene-ready');status.textContent='EXPLORE THE COLLECTIONS BELOW ↓';});
+  reduce.addEventListener('change',()=>{paused=reduce.matches;});
+  canvas.addEventListener('webglcontextlost',event=>{event.preventDefault();cancelAnimationFrame(frame);document.body.classList.remove('scene-ready');status.textContent='USE EXPLORE TO OPEN A COLLECTION';});
   new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;},{rootMargin:'100px'}).observe(wrap);
   document.addEventListener('visibilitychange',()=>{last=0;});
   function animate(now){frame=requestAnimationFrame(animate);if(!visible||document.hidden)return;const dt=Math.min((now-(last||now))/1000,.05);last=now;const t=(now-started)/1000;
     const smoothing=1-Math.exp(-dt*4);easedPointer.lerp(paused||reduce.matches?new THREE.Vector2():pointer,smoothing);
     if(entering){const v=Math.min(1,(now-transitionStart)/700);const ease=v*v*(3-2*v);camera.position.copy(baseCamera).lerp(zoomPosition,ease);look.copy(target).lerp(zoomTarget,ease);camera.lookAt(look);}else{camera.position.set(baseCamera.x+easedPointer.x*1.25,baseCamera.y-easedPointer.y*.65,baseCamera.z-easedPointer.x*.55);camera.lookAt(target);}
-    if(!paused&&!reduce.matches){rings.rotation.y+=dt*.18;dust.rotation.y=Math.sin(t*.05)*.03;}
-    sun.intensity=THREE.MathUtils.lerp(sun.intensity,lightMode?6.3:4,smoothing);hemi.intensity=THREE.MathUtils.lerp(hemi.intensity,lightMode?3:2.2,smoothing);amber.intensity=THREE.MathUtils.lerp(amber.intensity,lightMode?10:28,smoothing);
+    if(!paused&&!reduce.matches&&t<5){rings.rotation.y+=dt*.18;dust.rotation.y=Math.sin(t*.05)*.03;}
     for(const [key,anchor] of Object.entries(anchors)){const p=anchor.clone().project(camera);const a=destinations[key];a.style.left=`${(p.x*.5+.5)*width}px`;a.style.top=`${(-p.y*.5+.5)*height}px`;}
     renderer.render(scene,camera);
   }

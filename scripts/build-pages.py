@@ -34,7 +34,7 @@ def nav(prefix, current=''):
 def footer(prefix, world):
     links = ''.join(f'<a href="{prefix}{slug}/"><small>{number} / NEXT WORLD</small><span>{name} ↗</span></a>' for slug, name, number, _ in WORLDS if slug != world)
     return f'''<section class="continue-exploring"><div class="eyebrow">KEEP FOLLOWING YOUR CURIOSITY</div><nav aria-label="Continue exploring">{links}</nav></section>
-<footer class="universe-footer"><a href="{prefix}">← All worlds</a><span>ERIC JAMES McDERMOTT</span><button class="motion-toggle" type="button" aria-pressed="false" hidden><span class="motion-label">Pause motion</span></button><a href="mailto:EricJamesMcDermott@gmail.com">Start a conversation ↗</a></footer>'''
+<footer class="universe-footer"><a href="{prefix}">← All worlds</a><span>ERIC JAMES McDERMOTT</span><a href="mailto:EricJamesMcDermott@gmail.com">Start a conversation ↗</a></footer>'''
 
 
 def page(directory, world, label, title, description, content, feature='', jump='Explore the collection', gallery=False, extra_head='', extra_script='', filename='index.htm'):
