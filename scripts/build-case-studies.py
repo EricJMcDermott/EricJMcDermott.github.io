@@ -33,7 +33,7 @@ projects = [
          steps=[('Design the connected experience.', 'Designed a product spanning care tracking, personalized insights, evidence-grounded Q&A, and memory books. The existing product gallery shows the interface across these features.'),('Own the build from end to end.', 'Responsible for product direction, UX, architecture, frontend, backend, AI features, deployment, and iteration. Used Codex and Claude Code as part of the development workflow.'),('Take it through launch and iteration.', 'Designed, built, and launched the product. This project demonstrates end-to-end ownership of a working application; adoption and retention figures are not yet included here.')],
          results=[('4 areas', 'Care, questions, memories, and insights'),('End to end', 'Product, UX, engineering, and deployment'),('Launched', 'Working product with ongoing iteration')],
          outcome='See the product gallery for the actual interfaces. The project currently provides evidence of a shipped product and hands-on ownership rather than a claim about measured customer outcomes.',
-         sources=[('../../business/babybaby/', 'BabyBaby product screenshots')], next='applied-ai', nextname='Applied AI')
+         sources=[('https://babybabyapp.com/', 'BabyBaby live website'),('../../business/babybaby/', 'BabyBaby product screenshots')], next='applied-ai', nextname='Applied AI')
 ]
 
 for p in projects:
