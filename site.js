@@ -1,7 +1,7 @@
 (() => {
   'use strict';
   const root = document.documentElement;
-  const isHome = Boolean(document.querySelector('#world-sculpture'));
+  const isHome = document.body.classList.contains('portfolio-home');
   const reduce = matchMedia('(prefers-reduced-motion: reduce)');
 
   // The homepage owns its renderer; collection pages share the same motion preference.
@@ -9,7 +9,7 @@
     let paused = reduce.matches;
     try {
       const saved = sessionStorage.getItem('ejm-motion-paused');
-      if (saved !== null) paused = saved === 'true';
+      if (saved !== null) paused = saved === 'true' || reduce.matches;
     } catch {}
     const toggle = document.querySelector('.motion-toggle');
     function syncMotion() {

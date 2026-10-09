@@ -5,6 +5,7 @@ from html import escape as esc
 import json
 import re
 import hashlib
+import runpy
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = json.loads((ROOT / 'content/collections.json').read_text())
@@ -17,15 +18,15 @@ def version_assets(markup):
         filename=base.split('/')[-1].split('"')[-1]
         version=hashlib.sha256((ROOT/filename).read_bytes()).hexdigest()[:10]
         return base+'?v='+version+'"'
-    return re.sub(r'((?:src|href)="[^"?]*(?:home|site|game-player)\.(?:css|js))(?:\?[^"]*)?"',replace,markup)
+    return re.sub(r'((?:src|href)="[^"?]*(?:home|site|studio|portfolio|game-player)\.(?:css|js))(?:\?[^"]*)?"',replace,markup)
 
 
 def nav(prefix, current=''):
-    links = ''.join(f'<a href="{prefix}{slug}/"' + (' aria-current="page"' if slug == current else '') + f'><span>{number}</span> {name}</a>' for slug, name, number, _ in WORLDS)
+    links = f'<a href="{prefix}">Studio</a><a href="{prefix}#directory">Explore</a><a href="{prefix}#about">About</a><a href="{prefix}science/EJM-CV.pdf" target="_blank" rel="noopener">CV ↗</a>'
     return f'''<header class="universe-header">
   <a class="wordmark" href="{prefix}" aria-label="Eric James McDermott home">EJM<span class="brand-star" aria-hidden="true">✳</span></a>
   <span class="universe-name">ERIC JAMES<br>McDERMOTT</span>
-  <nav class="universe-nav" aria-label="Explore the worlds">{links}</nav>
+  <nav class="universe-nav" aria-label="Main navigation">{links}</nav>
   <a class="universe-contact" href="mailto:EricJamesMcDermott@gmail.com">Say hello <span aria-hidden="true">↗</span></a>
 </header>'''
 
@@ -66,7 +67,7 @@ def section(content, title, kicker='SELECTED WORK', id='collection', light=True,
 
 
 def card(href, image, title, text, tag='', contain=False):
-    return f'<a class="work-card reveal" href="{href}"><div class="work-image {"contain-image" if contain else ""}"><img src="{image}" alt="{esc(title)}" loading="lazy" width="720" height="540"><span class="work-enter" aria-hidden="true">↗</span></div><div class="work-meta">{tag}<span aria-hidden="true">↗</span></div><h3>{title}</h3><p>{text}</p></a>'
+    return f'<a class="work-card reveal" href="{href}"><div class="work-image {"contain-image" if contain else "illustration-image" if image.endswith(".svg") else ""}"><img src="{image}" alt="{esc(title)}" loading="lazy" width="720" height="540"><span class="work-enter" aria-hidden="true">↗</span></div><div class="work-meta">{tag}<span aria-hidden="true">↗</span></div><h3>{title}</h3><p>{text}</p></a>'
 
 
 def video(identifier, title):
@@ -115,7 +116,7 @@ def cover(image, target, label, detail):
 
 # The four hubs: one visual system, with content and actions specific to each world.
 phone_feature='''<a class="hero-feature phone-feature" href="babybaby/"><div class="feature-topline eyebrow">FEATURED PROJECT <span>01 / PRODUCT</span></div><img src="../business/baby-app-images/BabyBabyApp_page1.png" alt="BabyBaby daily care tracker"><div class="feature-caption"><span>BabyBaby<small>A companion for new parents.</small></span><span class="feature-arrow" aria-hidden="true">↗</span></div></a>'''
-business_cards = '<div class="work-grid">'+card('babybaby/','../business/baby-app-images/BabyBabyApp_page1.png','BabyBaby','Daily care tracking, memories, and patterns in one place.','PRODUCT / APP',True)+'''<a class="work-card reveal" href="https://www.meucci.org" target="_blank" rel="noopener noreferrer"><div class="work-image type-art"><span>What<br>if<span>?</span></span></div><div class="work-meta">VENTURE / MEUCCITECH <span>↗</span></div><h3>Ideas worth building.</h3><p>Explore Meuccitech and the work behind the venture.</p></a></div>'''
+business_cards = '<div class="work-grid">'+card('../work/applied-ai/','../assets/work/knowledge-map.svg','Applied AI at diconium','AI products, hands-on engineering, and cross-functional team leadership.','AI / PRODUCT / LEADERSHIP')+card('../work/meuccitech/','../assets/work/audio-pipeline.svg','Meuccitech','From voice AI to a commercial audiobook production business.','FOUNDER / CEO')+card('../work/babybaby/','../business/baby-app-images/BabyBabyApp_page1.png','BabyBaby','A parents’ companion, from concept through launch.','PRODUCT / APP',True)+card('../work/rehality/','../assets/work/rehality-loop.svg','Rehality','Connecting neuroscience, XR, and a four-partner research consortium.','RESEARCH / LEADERSHIP')+'</div>'
 business = section(business_cards,'From idea to everyday.','01 / VENTURES & PRODUCTS')
 business += section('<div class="film-grid">'+video('UgrSs2XZVqs','Rehality — MedTech Startup School · Second place')+video('_RgH6a_CNj0','Prometheus Science — MedTech Startup School · First place')+'</div>','Make the case.','02 / PITCHES & PRESENTATIONS',id='presentations',light=False)
 business += section('<div class="resource-list"><a class="resource" href="../science/EJM-CV.pdf" target="_blank" rel="noopener"><span>01</span><h3>Curriculum vitae</h3><small>PDF ↗</small></a><a class="resource" href="https://www.linkedin.com/in/ejmcdermott/" target="_blank" rel="noopener noreferrer"><span>02</span><h3>Let’s connect on LinkedIn</h3><small>LINKEDIN ↗</small></a></div>','Keep the conversation going.','03 / CONNECT',id='connect')
@@ -123,7 +124,8 @@ page('business','business','Business','Ideas into<br><em>action.</em>','Ventures
 
 science_feature='''<a class="hero-feature signal-feature" href="#collection"><div class="feature-topline eyebrow">THE LAB <span>BRAIN / BODY / INTERFACE</span></div><div class="signal-orb" aria-hidden="true"><i></i><i></i><i></i><i></i><b></b></div><div class="feature-caption"><span>Follow the signal.<small>Papers, research, and presentations.</small></span><span class="feature-arrow" aria-hidden="true">↓</span></div></a>'''
 papers='<div class="resource-list">'+''.join(f'<a class="resource reveal" data-search-item data-search-text="{esc(p["title"],quote=True)}" href="{esc(p["href"],quote=True)}" target="_blank" rel="noopener noreferrer"><span>{i+1:02d}</span><h3>{esc(p["title"])}</h3><small>{"PDF" if ".pdf" in p["href"] else "PAPER"} ↗</small></a>' for i,p in enumerate(DATA['papers']))+'</div><p class="search-empty" data-search-empty hidden>No matching papers. Try another word.</p>'
-science=section(search('Find a paper or topic')+papers,'Questions worth following.','01 / PAPERS & READING')
+science=section('<a class="large-link" href="../work/rehality/"><span>Neuroscience, XR, and research translation.</span><strong>Explore Rehality ↗</strong></a>','Research into practice.','01 / RESEARCH CONTEXT',id='research-context')
+science+=section(search('Find a paper or topic')+papers,'Questions worth following.','01 / PAPERS & READING')
 science+=section('<div class="film-grid">'+''.join(video(i,t) for i,t in [('8Jv4oByOR0g','Virtual Reality Based Neurorehabilitation — DGKN 2021'),('BLg1opVH028','Vision Restoration with Optogenetics'),('IdS0Tsxkxwc','Mapping out the Baseball Swing')])+'</div>','From the lab, out loud.','02 / PRESENTATIONS',id='presentations',light=False)
 science+=section('<a class="large-link" href="EJM-CV.pdf" target="_blank" rel="noopener"><span>The background. The experience.</span><strong>Read my CV ↗</strong></a>','A little more context.','03 / CURRICULUM VITAE',id='cv')
 page('science','science','Science','Follow the<br><em>question.</em>','Neuroscience, movement, and human–computer interaction. Exploring the connections between brains, bodies, and technology.',science,science_feature,'Explore the research')
@@ -181,4 +183,5 @@ for directory,_,title in games:
 home=ROOT/'index.htm';markup=home.read_text()
 markup=re.sub(r'<header class="(?:masthead|universe-header)">.*?</header>',nav('./'),markup,count=1,flags=re.S)
 home.write_text(version_assets(markup))
-print('Rendered 17 subpages and synchronized homepage navigation.')
+runpy.run_path(str(ROOT/'scripts/build-case-studies.py'), init_globals={'ROOT':ROOT,'nav':nav,'version_assets':version_assets})
+print('Rendered collection pages and 4 project briefs; synchronized homepage navigation.')

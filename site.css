@@ -315,3 +315,25 @@ body.viewer-open { overflow: hidden; }
   .woodwork-archive .gallery-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
 }
 @media(prefers-reduced-motion:reduce) { .carousel-track { scroll-behavior: auto; } .carousel-slide img { transition: none; } }
+/* Shared navigation stays readable across the portfolio and collection pages. */
+.universe-nav a { font-size:14px; }
+.universe-contact { font-size:13px; }
+@media(max-width:760px) { .universe-nav a { font-size:12px; } }
+/* The collection rooms carry the studio's evening colors and warm materials. */
+.world-page{background:#101d23;--paper:#e7e1d3;--line:#34454b}
+.world-page .universe-header{background:#101d23f5}
+.world-page .page-hero{background:radial-gradient(ellipse at 85% 35%,#28465066,transparent 70%)}
+.world-page[data-world="art"]{--accent:#efbb85;--wash:#e6dac8}
+.world-page[data-world="business"]{--accent:#a6d7bd;--wash:#dbe3d5}
+.world-page .dark-section{background:#142830}
+.world-page .page-description{font-size:16px;color:#b7c7cb}
+.world-page .breadcrumbs{font-size:12px;color:#9fadb2}
+.world-page .hero-feature{box-shadow:0 25px 70px #0003}
+.world-page .continue-exploring{background:#13252c}
+.world-page .universe-footer{background:#101d23}
+/* Diagrams and collection originals must fit without cutting off their content. */
+.work-image.illustration-image{aspect-ratio:3/2}
+.work-image.illustration-image>img{object-fit:contain}
+.work-card:hover .illustration-image>img{transform:none}
+.carousel-slide img{object-fit:contain}
+.case-facts>div,.case-section,.case-results>div{min-width:0;overflow-wrap:break-word}

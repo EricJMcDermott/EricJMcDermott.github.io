@@ -4,7 +4,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlsplit, unquote
 ROOT=Path(__file__).resolve().parent.parent
-PAGES=[ROOT/'index.htm',*ROOT.glob('*/index.htm'),*ROOT.glob('*/index.html'),ROOT/'business/babybaby/index.htm']
+PAGES=[ROOT/'index.htm',*ROOT.glob('*/index.htm'),*ROOT.glob('*/index.html'),ROOT/'business/babybaby/index.htm',*ROOT.glob('work/*/index.htm')]
 errors=[]
 entries={}
 def exact_case(path):
