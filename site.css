@@ -23,6 +23,25 @@
 .sculpture-portal:hover .portal-action>span:last-child { transform: translate(4px,-4px); }
 .sculpture-portal:hover .portal-action { color: var(--accent); }
 .world-page[data-world="business"] { --accent: #c8ff70; --wash: #dfe9ce; }
+.world-page[data-world="business"] .page-hero { padding-top: 14px; padding-bottom: 22px; }
+.world-page[data-world="business"] .breadcrumbs { margin-bottom: 18px; }
+.world-page[data-world="business"] .page-hero-copy>.eyebrow { margin-bottom: 10px; }
+.world-page[data-world="business"] .page-hero h1 { font-size: clamp(46px, 5vw, 70px); }
+.world-page[data-world="business"] .page-description { max-width: 850px; margin-top: 10px; }
+.world-page[data-world="business"] #collection { padding-top: 28px; }
+.world-page[data-world="business"] #collection .content-heading { margin-bottom: 24px; }
+.world-page[data-world="business"] #collection .content-heading .eyebrow { margin-bottom: 8px; }
+.world-page[data-world="business"] #collection .content-heading h2 { font-size: clamp(28px, 3.2vw, 44px); }
+.world-page[data-world="business"] .work-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; }
+@media (max-width: 1050px) { .world-page[data-world="business"] .work-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) {
+  .world-page[data-world="business"] .work-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 12px; }
+  .world-page[data-world="business"] .work-image { aspect-ratio: 1.55; }
+  .world-page[data-world="business"] .work-enter { width: 30px; height: 30px; right: 7px; bottom: 7px; font-size: 18px; }
+  .world-page[data-world="business"] .work-meta { font-size: 7px; margin: 9px 0 7px; }
+  .world-page[data-world="business"] .work-card h3 { font-size: 18px; }
+  .world-page[data-world="business"] .work-card>p { display: none; }
+}
 .world-page[data-world="science"] { --accent: #8ad6ff; --wash: #d3e3e9; }
 .world-page[data-world="adventure"] { --accent: #ffad5e; --wash: #e7dccb; }
 .world-page[data-world="art"] { --accent: #d1a8ff; --wash: #e1dce9; }
