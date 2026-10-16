@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <rect width="900" height="600" fill="#d9e2d8"/>
+  <g stroke="#94a68f" opacity=".5"><path d="M0 100H900M0 200H900M0 300H900M0 400H900M0 500H900M100 0V600M200 0V600M300 0V600M400 0V600M500 0V600M600 0V600M700 0V600M800 0V600"/></g>
+  <g fill="none" stroke="#213d32">
+    <circle cx="450" cy="285" r="175" stroke-dasharray="2 10"/>
+    <path d="M285 190L450 285 615 190M285 380L450 285 615 380" stroke-width="2"/>
+    <rect x="375" y="205" width="150" height="160" rx="12" fill="#f3f0e8" stroke-width="2"/>
+    <path d="M400 243H500M400 305H480M400 325H465" stroke="#94a68f" stroke-width="2"/>
+    <path d="M450 286c-40-23-26-46-10-36l10 8 10-8c16-10 30 13-10 36Z" fill="#d24a2f" stroke="none"/>
+    <g fill="#f3f0e8" stroke-width="2"><circle cx="285" cy="190" r="40"/><circle cx="615" cy="190" r="40"/><circle cx="285" cy="380" r="40"/><circle cx="615" cy="380" r="40"/></g>
+    <path d="M276 171v22a9 9 0 0 0 18 0v-22M270 180h30M600 179c0-17 30-17 30 0 0 9-15 9-15 18M615 205v2M270 370h30v23h-30ZM280 365h10M279 380a6 6 0 1 0 12 0 6 6 0 1 0-12 0M597 396v-30M597 396h37M604 387l9-9 8 3 11-15" stroke-width="2"/>
+  </g>
+  <g fill="#213d32" font-family="Arial,sans-serif">
+    <text x="40" y="48" font-size="13" letter-spacing="3">BABYBABY / A CONNECTED CARE JOURNAL</text>
+    <g font-size="12" letter-spacing="2" text-anchor="middle"><text x="285" y="253">DAILY CARE</text><text x="615" y="253">QUESTIONS</text><text x="285" y="443">MEMORIES</text><text x="615" y="443">INSIGHTS</text></g>
+    <text x="40" y="548" font-size="30">Little moments. All together.</text>
+    <text x="40" y="575" font-size="13">CARE + QUESTIONS + MEMORIES + INSIGHTS</text>
+  </g>
+</svg>

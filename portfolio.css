@@ -111,3 +111,13 @@
   .connection-atlas { margin-bottom:75px; }
   .atlas-note { top:100%; bottom:auto; margin-top:14px; }
 }
+
+/* Product briefs expose the live product alongside role, period, and scope. */
+.case-facts-with-website { grid-template-columns:1.4fr .8fr 1.6fr 1fr; }
+.case-facts-with-website a { text-decoration:underline; text-underline-offset:4px; overflow-wrap:anywhere; }
+.case-facts-with-website a:hover { color:var(--accent); }
+@media(max-width:760px) {
+  .case-facts-with-website { grid-template-columns:1fr 1fr; }
+  .case-facts-with-website>div:first-child { grid-column:auto; }
+}
+@media(max-width:420px) { .case-facts-with-website { grid-template-columns:1fr; } }
